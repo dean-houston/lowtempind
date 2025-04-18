@@ -1,0 +1,159 @@
+<?php
+/**
+ * Template Name: Market page
+ */
+?>
+<?php get_template_part( 'parts/header' ); ?>
+
+	<main id="main" role="main">
+	
+		<?php $slider = get_field("slider"); ?>
+		<?php if(!empty($slider)): ?>
+		<div id="slider">
+			<?php while(the_repeater_field("slider")): ?>
+			<?php $background = wp_get_attachment_image_src( get_sub_field('slide_image'), 'slider' ); ?>
+			<div class="slide" style="background-image: url(<?php echo $background[0]; ?>);">
+				<img src="<?php echo $background[0]; ?>" />
+				<div class="overlay">
+					<h2><?php the_sub_field("slide_header"); ?></h2>
+					<?php $link_1_url = get_sub_field("slide_link_1"); $link_2_url = get_sub_field("slide_link_2"); $link_3_url = get_sub_field("slide_link_3"); ?>
+					<?php $link_1_text = get_sub_field("slide_link_text_1"); $link_2_text = get_sub_field("slide_link_text_2"); $link_3_text = get_sub_field("slide_link_text_3"); ?>
+					<?php if($link_1_url != ""): ?>
+					<a href="<?php echo $link_1_url; ?>"><?php echo $link_1_text; ?> <i class="fa fa-chevron-right"></i></a>		
+					<?php endif; ?>
+					<?php if($link_2_url != ""): ?>
+					<a href="<?php echo $link_2_url; ?>"><?php echo $link_2_text; ?> <i class="fa fa-chevron-right"></i></a>		
+					<?php endif; ?>
+					<?php if($link_3_url != ""): ?>
+					<a href="<?php echo $link_3_url; ?>"><?php echo $link_3_text; ?> <i class="fa fa-chevron-right"></i></a>		
+					<?php endif; ?>
+				</div><!-- / .overlay -->
+			</div><!-- / .slide -->
+			<?php endwhile; ?>
+			<div class="slider-nav"></div>
+		</div><!-- / #slider -->
+		
+		<?php else: ?>
+			<?php if(has_post_thumbnail()): ?>
+			<?php $market_page_splash = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'market-page-splash'); ?>
+			<div id="page-splash" style="background-image: url(<?php echo $market_page_splash[0]; ?>);">
+			</div><!-- / #market-page-splash -->
+			<?php endif; ?>
+		<?php endif; ?>
+		
+		<div id="content">
+		
+		<div id="hotspot-splash">
+			<?php the_field('image_hotspot') ?>
+		</div><!-- / #hotspot-splash -->
+		
+			<div class="wrapper">
+				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+					<div class="content-left-column">
+						<p class="preheader">Market</p>
+						<span class="divider"></span>
+						<h1><?php the_title(); ?></h1>
+						<?php the_content(); ?>
+					</div>
+					<div class="contact-form">
+						<?php the_field('contact-form') ?>
+					</div>
+				<?php endwhile; ?>
+				<?php wp_reset_query(); ?>
+				
+				<div class="market-case-studies">
+					<h2>Case Studies & Recent Installations</h2>
+						<?php $featured_cases = get_field("featured_cases"); ?>
+						<?php if(!empty($featured_cases)): ?>
+						<div class="case-study">
+							<?php 
+								$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+								$query_args = array(
+									'post_type' => 'case-studies',
+									'posts_per_page' => 3,
+									'paged' => $paged,
+									'post__in' => $featured_cases,
+									'orderby' => 'post__in'	
+								);
+								$the_query = new WP_Query($query_args); ?>
+							<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
+								<div class="single-case">
+									<a class="image" href="<?php the_permalink(); ?>">
+										<?php the_post_thumbnail(); ?>
+									</a>
+									<h4 class="title"><?php the_title(); ?></h4>
+									<p class="location"><?php the_field("location"); ?></p>
+									<p class="excerpt"><?php $excerpt = get_the_excerpt(); echo wp_trim_words( $excerpt , '25' ); ?></p>
+									<a class="learn-more" href="<?php the_permalink(); ?>">Learn more <i class="fa fa-chevron-right"></i></a>
+								</div>
+							<?php endwhile; wp_reset_query(); ?>
+						</div><!-- / .case-study -->
+					<?php endif; ?>	
+				</div>
+
+				<div class="video">
+					<blockquote>
+						<p style="margin-bottom: 35px; text-align: center;">Check out this video to see how Broad Street Elementary School in Bridgeton, NJ experienced a total transformation over a three-day weekend.</p>
+					</blockquote>
+					<div class="video-container">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/bo5Erk79ezQ?rel=0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					</div>
+				</div>
+				
+				<div class="carousel" style="clear: both;">
+					<h2>Gallery</h2>
+					<?php the_field('gallery') ?>
+				</div>
+				
+				<div class="downloadable">
+					<div class="download-tn">
+						<a href="<?php the_field('download-link'); ?>"><img src="<?php the_field('thumbnail'); ?>"></a>
+					</div>
+					<div class="download-cta">
+						<?php the_field('call-to-action'); ?>
+						<a class="button green" href="<?php the_field('download-link'); ?>">Check It Out</a>
+					</div>
+				</div>	
+
+				<?php $featured_products = get_field("featured_products"); ?>
+				<?php if(!empty($featured_products)): ?>
+				<div id="featured-products" class="content-section">
+					<div class="wrapper">
+						<h2><?php the_title(); ?> <span class="appended-title">Product Serving Solutions</span></h2>
+						<div id="post-list" class="list-view">
+						<?php 
+							$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+							$query_args = array(
+								'post_type' => 'product',
+								'posts_per_page' => 8,
+								'paged' => $paged,
+								'post__in' => $featured_products,
+								'orderby' => 'post__in'	
+							);
+							$the_query = new WP_Query($query_args); ?>
+						<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
+							<div class="item">
+								<a href="<?php the_permalink(); ?>">
+									<div class="featured-image">
+										<?php the_post_thumbnail('list-image'); ?>
+									</div><!-- / .feature-image -->
+									<div class="item-detail">
+										<span class="product-logo"><?php the_field('product-logo'); ?></span>
+										<p><?php $excerpt = get_the_excerpt(); echo wp_trim_words( $excerpt , '35' ); ?></p>
+										<p class="read-more">Read More <i class="fa fa-chevron-right"></i></p>
+									</div><!-- / .item-detail -->
+								</a>
+							</div><!-- / .item -->
+						<?php endwhile; wp_reset_query(); ?>
+						</div><!-- / #post-list .list-view -->
+					</div><!-- / .wrapper -->
+				</div><!-- / #featured-products .content-section -->
+				<?php endif; ?>				
+			
+				
+			</div><!-- / .wrapper -->
+		</div><!-- / #content -->
+	
+	</main><!-- / #main -->
+
+<?php get_template_part( 'parts/footer' ); ?>

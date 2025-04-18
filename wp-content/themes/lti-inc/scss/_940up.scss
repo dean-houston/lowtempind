@@ -1,0 +1,559 @@
+/*
+	HEADER
+*/
+
+	#top-bar {
+		background: $navy;
+		display: block;
+		color: $white;
+		
+		a {
+			color: $white;
+			text-decoration: none;
+		}
+		
+		li {
+			display: block;
+			float: left;
+			
+			a {
+				padding: 10px 5px 10px 5px;
+				display: block;
+			}
+		}
+		
+		ul {
+			float: right;
+			margin-left: 10px;
+		}
+		
+		#top-social {
+			
+			li {
+				font-size: 0.875em;
+				
+				a:hover {
+					color: lighten($navy, 30%);
+				}
+				
+				#search-activate {
+					background: #5a83a4;
+					padding: 10px;
+					
+					&:hover {
+						color: $white;
+						background: lighten(#5a83a4, 10%);
+					}	
+				}
+			}
+		}
+		
+		#top-links {
+			
+			li {
+				font-size: 0.75em;
+				padding-top: 1px;
+				
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+			
+	#searchform {
+		//display: block;
+		
+		input {
+			float: right;
+			width: 30%;
+			background: #f3f3f3;
+			font-family: $body-font;
+			border: 0;
+			padding: 10px;
+			font-size: 0.875em;
+			font-weight: 100;
+			color: $black;
+			position: absolute;
+			top: 0;
+			right: 20px;
+		}
+	}
+
+	#top {
+		background: $white;
+		border-bottom: 1px solid $light-grey;
+		height: auto;
+		
+		#logo {
+			background-image: url(../images/logo.jpg);
+			margin-top: 10px;
+			height: 80px;
+			width: 161px;
+			background-size: 161px 80px;
+			margin-bottom: 10px;
+		}
+		
+		#nav-activate {
+			display: block;
+			color: $black;
+			border: 1px solid $black;
+			padding: 7px 9px;
+			margin-top: 33px;
+			font-size: 1em;
+		}
+		
+		#primary {
+			display: none;
+			clear: both;
+			float: left;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			
+			.menu {
+		
+				> li {
+					display: block;
+					float: left;
+					font-size: 0.875em;
+					//letter-spacing: 1px;
+					position: relative;
+					text-transform: uppercase;
+					margin-right: 20px;
+					
+					> a {
+						color: $black;
+						text-decoration: none;
+						font-weight: bold;
+						padding-top: 5px;
+						display: block;
+						border-top: 5px solid $white;
+						padding-bottom: 5px;
+						
+						&:hover {
+							border-top: 5px solid $green;
+							background: none;
+						}
+					}
+					
+					&.current-menu-item, &.current-menu-ancestor {
+						
+						> a {
+							border-top: 5px solid $green;
+							background: none;
+						}
+					}
+					
+					&.whats-new {
+						
+						> a {
+							color: $green;
+						}
+					}
+					
+					&:hover {
+						
+						> .sub-menu {
+							display: block;
+							//opacity: 1;
+						}
+						
+						> a {
+							border-top: 5px solid $green;
+							background: none;
+						}
+					}
+				}
+			}
+			
+			.sub-menu {
+				display: none;
+				//opacity: 0;
+				//@include transition(opacity, 0.2s);
+				background: $navy;
+				position: absolute;
+				position: absolute;
+				z-index: 50;
+				padding-top: 7px;
+				padding-bottom: 7px;
+				width: 200px;
+				left: 50%;
+				margin-left: -100px;
+				//position: relative;
+				
+				li {
+					font-size: 1em;
+					//white-space: nowrap;
+					position: relative;
+					line-height: 1.1;
+					text-align: center;
+					
+					> a {
+						padding-top: 5px;
+						padding-bottom: 5px;
+						padding-left: 20px;
+						padding-right: 20px;
+						display: block;
+						text-decoration: none;
+						color: $white;
+						font-weight: 100;
+						border-top: none;
+						
+						&:hover {
+							color: $navy;
+						}
+					}
+					
+					&:hover {
+						
+						> a {
+							color: lighten($navy, 30%);
+							background: none;
+						}
+					}
+					
+					.sub-menu {
+						display: none;
+						//opacity: 0;
+						//@include transition(opacity, 0.2s);
+						position: absolute;
+						//width: 200px;
+						//right: -200px;
+						//top: -1px;
+						top: -7px;
+						background: lighten($navy, 5%);
+						//border: 1px solid $grey;
+						border-bottom: 0;
+						z-index: 50;
+						margin-left: 0 !important;
+						left: 200px !important;
+						
+						li {
+							font-size: 1em;
+							display: block;
+							white-space: normal;
+							font-weight: normal;
+							
+							> a {
+								display: block;
+							}
+						}
+					}
+					
+					&:hover {
+						
+						> .sub-menu {
+							display: block;
+							//opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+/*
+	CONTENT
+*/
+
+	#modal {
+		padding: 80px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+		
+		p {
+			font-size: 18px;
+		}
+	}
+
+
+	#main {
+		//padding-top: 40px;
+	}
+	
+	#content, .content-section {
+		padding-bottom: 30px;
+		
+		h1, h2, h3, h4, h5, h6, p, ul, ol, img, blockquote, .divider {
+			margin-top: 30px;
+		}
+		
+		.divider {
+			margin-top: 15px;
+			//margin-bottom: -15px;
+		}
+		
+		h1 {
+			font-size: 1.5em;
+		}
+		
+		h2, h3 {
+			font-size: 1.25em;
+		}
+		
+		h4, h5, h6 {
+			font-size: 1.125em;
+		}
+	}
+	
+	.button {
+		//font-size: 1.25em;
+		//padding: 25px;
+	}
+	
+	#content.narrow, .content-section.narrow {
+		//padding: 40px;
+		//padding-top: 11px;
+		@include span-columns(8);
+	}
+	
+	#sidebar, .sidebar {
+		@include shift(1);
+		@include span-columns(3);
+		@include omega();
+		//padding-top: 30px;
+		clear: none;
+		//padding-left: 20px;
+		
+		h1, h2, h3, h4, h5, h6, p, ul, ol, img, blockquote, .divider {
+			margin-top: 30px;
+		}
+		
+		.divider {
+			margin-top: 15px;
+			//margin-bottom: -15px;
+		}
+		
+		h1 {
+			font-size: 1.5em;
+		}
+		
+		h2, h3 {
+			font-size: 1.25em;
+		}
+		
+		h4, h5, h6 {
+			font-size: 1.125em;
+		}
+		
+		.widget {
+			
+			&:after {
+				margin-top: 30px;
+			}
+			
+			ul {
+				
+				li {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+	
+	/*
+		CASE STUDY SINGLE
+	*/
+	
+	#sidebar .case-study {
+		
+		a.learn-more {
+			margin-top: 30px;
+		}
+	}
+	
+/*
+	HERO AREAS
+*/
+
+	#page-splash {
+		height: 300px;
+		
+		#page-title {
+			display: table;
+			height: 100%;
+			position: relative;
+			background: none;
+			margin: 0 auto;
+			max-width: 66.66%;
+			
+			.wrapper {
+				display: table-cell;
+				vertical-align: middle;
+				margin-left: auto;
+				margin-right: auto;
+				
+				h1 {
+					background: rgba(#000, 0.6);
+					padding: 20px;
+				}
+			}
+		}
+	}
+	
+	#page-splash--home {
+		
+		#page-title--home {
+			
+			h1 {
+				max-width: 66.66%;
+			}
+		}
+	}
+	
+/*
+	PAGE SPECIFIC
+*/
+
+	/*
+		GATEWAY
+	*/
+	
+		.arrow-nav {
+						
+			li {
+				display: inline-block;
+				margin-right: 20px;
+				margin-bottom: 0px;
+			}
+		}
+		
+		
+		
+				
+	/*
+		HOME PAGES
+	*/
+	
+		#slider {
+			height: 550px;
+			
+			.slide {
+				background: none !important;
+				height: 550px;
+				padding-left: 1px;
+				padding-right: 1px;
+				
+				img {
+					display: block;
+					opacity: 0.5;
+				}
+				
+				.overlay {
+					opacity: 0;
+					padding: 40px;
+				}
+				
+				&.slick-center {
+
+					img {
+						opacity: 1;
+					}
+					
+					.overlay {
+						opacity: 1;
+					}
+				}
+				
+				h2 {
+					font-size: 2em;
+					//text-shadow: 0 0px 0px #000;
+					//letter-spacing: 1px;
+					line-height: 1.1;
+				}
+				
+				a {
+					font-size: 1.25em;
+					margin-top: 10px;
+				}
+			}
+			
+			.slider-nav {
+				position: absolute;
+				z-index: 500;
+				top: 50%;
+				width: 100%;
+				height: 60px;
+				margin-top: -30px;
+				//background: red;
+				
+				button {
+					background: 0;
+					border: 0;
+					//text-indent: -9999px;
+					
+					&:before {
+						//font-size: 1.25em;
+					}
+				}
+				
+				.slick-prev {
+					left: 0;
+				}
+				
+				.slick-next {
+					right: 0;
+				}
+			}
+		}
+	
+		#signposts {
+
+			.signpost {
+				@include span-columns(4);
+				@include omega-reset(2n);
+				@include omega(3n);
+				min-height: 380px;
+				line-height: 1.5;
+				
+				h3 {
+					font-size: 1.25em;
+				}
+			}
+		}
+
+/*
+	BLOG INDEX
+*/
+
+	
+#post-nav {
+		clear: both;
+		@include span-columns(8);
+	}
+	
+	/*
+		GALLERY ITEMS
+	*/
+	
+		.gallery-item {
+			@include span-columns(3);
+			@include omega-reset(3n);
+			@include omega(4n);
+			margin-bottom: 20px;
+		}
+	
+/*
+	FOOTER
+*/
+
+	#bottom {
+		padding-top: 60px;
+		
+		#discover-lti {
+			
+			h3 {
+				font-size: 1.25em;
+			}
+			
+			.divider {}
+			
+			p {
+				font-size: 1em;
+			}
+		}
+		
+		#copyright {
+			margin-top: 40px;
+		}
+	}

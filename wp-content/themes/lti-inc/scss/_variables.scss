@@ -1,0 +1,29 @@
+
+/*
+	COLOURS
+*/
+
+	$black: #444444;
+	$white: #ffffff;
+	
+	$navy: #00457c;
+	$grey: #b9bbbd;
+	$light-grey: #cccccc;
+	$green: #62bb21;
+	$orange: #d0980f;
+
+/*
+	FONTS
+*/
+
+	$header-font: "Gotham SSm A", "Gotham SSm B", 'Montserrat', sans-serif;
+	$body-font: "Gotham SSm A", "Gotham SSm B", 'Montserrat', sans-serif;
+	
+// ------------------------------------------------------------
+// Omega Reset
+// ------------------------------------------------------------
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}

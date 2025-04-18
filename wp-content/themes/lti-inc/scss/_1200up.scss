@@ -1,0 +1,378 @@
+/*
+	HEADER
+*/
+	#top-bar {
+		
+		ul {
+			margin-left: 20px;
+		}
+		
+		li {
+			
+			a {
+				padding: 15px 10px 15px 10px;
+				display: block;
+			}
+		}
+		
+		#top-social {
+			
+			li {
+				font-size: 1em;
+				
+				#search-activate {
+					padding: 15px;
+				}
+			}
+		}
+		
+		#top-links {
+			
+			li {
+				font-size: 0.875em;
+			}
+		}
+	}
+	
+	#searchform {
+		
+		input {
+			padding: 12px;
+		}
+	}
+	
+	#top {
+		height: 145px;
+		
+		#nav-activate {
+			display: none;
+		}
+		
+		#logo {
+			margin-top: 20px;
+			width: 211px;
+			height: 105px;
+			background-size: 211px 105px;
+		}
+		
+		#primary {
+			margin-top: 55px;
+			clear: none;
+			float: right;
+			display: block;
+			
+			.menu {
+				
+				> li {
+					margin-right: 0px;
+					margin-left: 18px;
+					
+					a {
+						padding-top: 7px;
+						padding-bottom: 7px;
+					}
+				}
+			}
+		}
+	}
+	
+/*
+	CONTENT
+*/
+
+	#main {
+		//padding-top: 60px;
+	}
+	
+	#content, .content-section {
+		//margin-bottom: 60px;
+		padding-top: 20px;
+		padding-bottom: 50px;
+		line-height: 1.6;
+		
+		h1 {
+			font-size: 1.75em;
+		}
+		
+		h2, h3 {
+			font-size: 1.5em;
+		}
+		
+		h4, h5, h6 {
+			font-size: 1.25em;
+		}
+		
+		p, li {
+			font-size: 1.125em;
+		}
+		
+		.parent-title {
+			font-size: 1em;
+		}
+	}
+
+	#content.narrow, .content-section.narrow {
+		@include span-columns(8);
+	}
+	
+	#sidebar, .sidebar {
+		@include span-columns(3);
+		padding-top: 20px;
+		@include omega();
+		padding-left: 2%;
+		padding-right: 2%;
+		margin-top: 30px;
+		background: #f2f2f2;
+		
+		h1 {
+			font-size: 1.75em;
+		}
+		
+		h2, h3 {
+			font-size: 1.5em;
+		}
+		
+		h4, h5, h6 {
+			font-size: 1.25em;
+		}
+		
+		p, li {
+			font-size: 1.125em;
+		}
+		
+		.parent-title {
+			font-size: 1em;
+		}
+	}
+	
+/*
+	HERO AREAS
+*/
+
+	#page-splash {
+		height: 550px;
+		font-size: 1.5em;
+		
+		#page-title {
+			max-width: 100%;
+			
+			.wrapper {
+				
+				h1 {
+					padding: 40px;
+				}
+			}
+		}
+	}
+	
+	#page-splash--home {
+		
+		#page-title--home {
+			//padding-top: 70px;
+			//padding-bottom: 70px;
+			
+			h1 {
+				line-height: 1.7;
+				font-size: 1.5em;
+				margin-bottom: 40px;
+			}
+			
+			.divider {
+				margin-bottom: 40px;
+			}
+			
+			p {
+				font-size: 1.5em;
+			}
+		}
+	}
+	
+	.splash-half {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			position: relative;
+			padding-bottom: 90px;
+			background: none;
+			
+			h2 {
+				text-transform: uppercase;
+				margin-bottom: 10px;
+				
+				i {
+					color: $green;
+				}
+			}
+			
+			.divider {
+				margin-bottom: 10px !important;
+			}
+			
+			p {
+				font-size: 16px !important; 
+				margin-bottom: 20px !important;
+			}
+			
+			.button {
+				position: absolute;
+				bottom: -300px;
+				transition: all 0.5s ease;
+				width: 50%;
+			}
+			
+			&:hover {
+				background: rgba($white, 0.33);
+				transition: all 0.5s ease;
+				
+				.button {
+					bottom: 20px;
+				}
+			}
+		}
+	
+	.splash-half {
+		padding-top: 140px;
+		padding-bottom: 120px;
+		width: 50%;
+		float: left;
+		
+		h2 {
+			font-size: 22px;
+			margin-bottom: 20px !important;
+			max-width: 66.66%;
+		}
+		
+		.divider {
+			margin-bottom: 20px !important; 
+		}
+		
+		p {
+			font-size: 18px !important;
+			max-width: 66.66%;
+		}
+		
+		.splash-half__inner {
+			transition: all 0.5s ease;
+		}
+		
+		&:hover {
+			
+			.button {
+				bottom: 80px;
+			}
+			
+			.splash-half__inner {
+				margin-top: -40px;
+				padding-bottom: 40px;
+			}
+		}
+	}
+
+/*
+	PAGE SPECIFIC
+*/
+
+	/*
+		GATEWAY
+	*/
+	
+		.arrow-nav {
+						
+			li {
+				font-size: 1em;
+			}
+		}
+		
+	/*
+		SINGLE CASE STUDIES
+	*/
+	
+		#pagination {
+			padding-top: 30px;
+			padding-bottom: 30px;
+			
+			ul {
+				
+				li {
+					
+				}
+			}
+		}
+		
+		#post-nav {
+		margin-bottom: 60px;
+	}
+		
+	/*
+		LANDING PAGES
+	*/
+	
+		#content .list-view, .content-section .list-view {
+			
+			.featured-image {
+				width: 30%;
+				float: left;
+			}
+			
+			.item-detail {
+				width: 70%;
+				float: right;
+				padding-left: 30px;
+			}
+		}
+		
+	/*
+		GALLERY ITEMS
+	*/
+	
+		.gallery-item {
+			margin-bottom: 24px;
+		}
+		
+/*
+	FOOTER
+*/
+
+	#bottom {
+		padding-top: 80px;
+		
+		#discover-lti {
+			padding-right: 60px;
+			margin-bottom: 60px;
+			
+			h3 {
+				font-size: 1.75em;
+				margin-bottom: 15px;
+			}
+			
+			.divider {
+				margin-bottom: 15px;
+			}
+			
+			p {
+				font-size: 1.125em;
+			}
+			
+			.button {
+				width: 40%;
+			}
+		}
+		
+		#contact-details {
+			padding-left: 40px;
+			
+			p {
+				font-size: 1em;
+			}
+		}
+		
+		#copyright {
+			
+			#bottom-links {
+				font-size: 0.875em;
+				
+				li {
+					padding-top: 2px;
+				}
+			}
+		}
+	}

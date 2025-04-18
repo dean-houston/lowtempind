@@ -1,0 +1,165 @@
+/*
+	CONTENT
+*/
+
+	.desktop {
+		display: block;
+	}
+	
+	.mobile {
+		display: none;
+	}
+	
+/*
+	PAGE SPECIFIC
+*/
+
+	/*
+		HOME PAGES
+	*/
+		#slider {
+			//height: 300px;
+			
+			.slide {
+				//height: 300px;
+			}
+		}
+		
+		#signposts {
+			padding-top: 20px;
+			
+			.wrapper {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			
+			.signpost {
+				@include span-columns(6);
+				@include omega(2n);
+				border-bottom: 0;
+				margin-bottom: 20px;
+			}
+		}
+		
+	/*
+		SINGLE CASE STUDIES
+	*/
+	
+		#pagination {
+			
+			ul {
+				
+				li {
+					
+					&.next {
+						clear: none;
+						float: right;
+						margin: 0;
+					}
+				}
+			}
+		}
+		
+	/*
+		LANDING PAGES
+	*/
+	
+		#content .list-view, .content-section .list-view {
+			
+			.featured-image {
+				width: 30%;
+				float: left;
+			}
+			
+			.item-detail {
+				width: 70%;
+				float: right;
+				padding-left: 20px;
+			}
+
+		}
+	
+	/*
+		GALLERY ITEMS
+	*/
+	
+		.gallery-item {
+			@include span-columns(4);
+			@include omega-reset(2n);
+			@include omega(3n);
+			margin-bottom: 15px;
+		}
+
+/*
+	FOOTER
+*/
+
+	#bottom {
+		border-top: 1px solid $light-grey;
+		padding-top: 40px;
+		
+		.wrapper.full {
+			max-width: 1240px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		
+		.wrapper {
+			max-width: 100%;
+			padding: 0;
+		}
+		
+		#discover-lti {
+			@include span-columns(8);
+			padding: 0;
+			padding-right: 20px;
+			border-right: 1px solid $light-grey;
+			border-top: 0;
+			margin-bottom: 20px;
+			color: #666;
+			
+			.button {
+				//margin-bottom: 20px;
+				width: 47.5%;
+				float: left;
+				margin-right: 2.5%;
+				margin-bottom: 0px;
+				
+				&:last-of-type {
+					margin-left: 2.5%;
+					margin-right: 0 !important;
+				}
+			}
+		}
+		
+		#contact-details {
+			@include span-columns(4);
+			@include omega();
+			background: none;
+			padding: 0;
+			//padding-left: 20px;
+			padding-top: 20px;
+		}
+		
+		#copyright {
+			border-top: 1px solid $light-grey;
+			margin-top: 20px;
+			
+			li {
+				margin-right: 20px;
+			}
+			
+			ul {
+				float: left;
+				clear: none;
+				margin-right: 20px;
+			}
+			
+			#bottom-links {
+				
+				li {
+					padding-top: 3px;
+				}
+			}
+		}
+	}

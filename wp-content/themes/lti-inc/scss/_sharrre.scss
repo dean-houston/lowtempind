@@ -1,0 +1,171 @@
+/**
+ * Sharing Buttons Styles
+ */
+.sharrre .box{
+  background:$navy;
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f838c', endColorstr='#4d5e66',GradientType=0 );
+  height:24px;
+  display:inline-block;
+  position:relative;
+ padding:0 25px 0 5px;
+  //-webkit-border-radius:3px;
+  //-moz-border-radius:3px;
+ border-radius:5px;
+  font-size:12px;
+  text-transform: uppercase;
+  float:left;
+  clear:both;
+  overflow:hidden;
+  -webkit-transition:all 0.3s linear;
+  -moz-transition:all 0.3s linear;
+  -o-transition:all 0.3s linear;
+  transition:all 0.3s linear;
+  font-family: $body-font;
+  margin-top: 5px;
+}
+.sharrre .left{
+  line-height:22px;
+  display:block;
+  white-space:nowrap;
+  text-shadow:0px 1px 1px rgba(255,255,255,0.3);
+  color:#ffffff;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  -o-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  cursor: default;
+  font-family: $body-font;
+  width: 80px;
+}
+.sharrre .middle{
+  position:absolute;
+  height:22px;
+  top:0px;
+  right: 0;
+  width:auto;
+  padding: 0;
+  text-shadow:0px -1px 1px #363f49;
+  color:#fff;
+  white-space:nowrap;
+  text-align:left;
+  overflow:hidden;
+  -webkit-transition:width 0.3s linear;
+  -moz-transition:width 0.3s linear;
+  -o-transition:width 0.3s linear;
+  transition:width 0.3s linear;
+  a{
+    color:#fff;
+    font-weight:bold;
+    padding:0 9px 0 9px;
+    text-align:center;
+    float:left;
+    line-height:22px;
+    &.facebook {
+      //background: #3b5998;
+      &:hover {
+        //background: lighten(#3b5998, 10%)
+      }
+    }
+    &.twitter {
+      //background: #4099FF;
+      &:hover {
+        //background: lighten(#4099FF, 10%)
+      }
+    }
+    &.googleplus {
+      background: #dd4b39;
+      &:hover {
+        background: lighten(#dd4b39, 10%)
+      }
+    }
+  }
+  i {
+    color: #ffffff;
+    &.icon-twitter-bird {
+      font-size: 75%;
+    }
+  }
+}
+.sharrre .right{
+  position:absolute;
+  right:0px;
+  top:0px;
+  height:100%;
+  width:45px;
+  text-align:center;
+  line-height:22px;
+  color:#4b5d61;
+  background:#f1faf9;
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(#f1faf9,0),color-stop(#bacfd2,1));
+  background:-webkit-linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+  background:-moz-linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+  background:-o-linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+  background:linear-gradient(top, #f1faf9 0%, #bacfd2 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1faf9', endColorstr='#bacfd2',GradientType=0 );
+}
+/*.sharrre .box:hover{
+  padding-right:140px;
+}
+.sharrre .middle a:hover{
+  text-decoration:none;
+}
+.sharrre .box:hover .middle{
+  width:106px;
+}*/ 
+
+.mfp-title {
+	padding-right: 0 !important;
+}
+
+.details-link {
+	width: 50%;
+	float: left;
+	padding-right: 10px;
+	margin-top: 10px;
+	font-size: 16px;
+	font-family: $body-font;
+	
+	a {
+		color: $white;
+		
+		&:hover {
+			color: #ccc;
+		}
+	}
+}
+
+.social-buttons {
+	width: 50%;
+	float: right;
+	padding-left: 10px;
+	margin-top: 10px;
+	font-size: 16px;
+	
+	.left {
+		float: right;
+		margin-right: 7px;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+	
+	.middle {
+		float: right;
+		
+		.twitter-wrap {
+			float: left;
+			margin-left: 7px;
+		}
+		
+		.facebook-wrap {
+			float: left;
+			margin-left: 7px;
+		}
+		
+		.twitter-wrap, .facebook-wrap {
+			&:hover {
+				color: #ccc;
+				cursor: pointer;
+			}
+		}
+	}
+}
