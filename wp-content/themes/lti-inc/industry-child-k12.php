@@ -29,9 +29,9 @@ Template Post Type: post, page
 
 		.button {
 			max-width: fit-content;
-        	margin: auto;
-        	padding: .8rem 1rem;
-        	font-size: 1.1rem;
+			margin: auto;
+			padding: .8rem 1rem;
+			font-size: 1.1rem;
 		}
 	}
 
@@ -282,6 +282,7 @@ Template Post Type: post, page
 		.tile {
 			flex-basis: 22%;
 			text-align: center;
+
 			img {
 				width: 100%;
 			}
@@ -296,6 +297,108 @@ Template Post Type: post, page
 			}
 		}
 	}
+
+
+	.carousel-container {
+		display: flex;
+		/* animation: scroll 15s linear infinite; */
+		/* animation-timing-function: ease-in-out; */
+		overflow: hidden;
+		width: 180%;
+		height: 100%;
+		position: relative;
+
+		&:hover {
+			animation-play-state: paused;
+		}
+
+		gap: 2rem;
+		padding: 0;
+		justify-content: space-evenly;
+
+		.carousel-item {
+			flex-basis: 20%;
+		}
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	.serving-counters {
+		width: 80%;
+		margin: 2rem auto;
+		text-align: center;
+		padding: 2rem;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			margin-bottom: 2rem;
+		}
+
+		.specline {
+			background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-specline.jpg) no-repeat left/100%;
+			height: 15rem;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.colorpoint {
+			background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-colorpoint.jpg) no-repeat left/100%;
+			height: 15rem;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.grab-and-go {
+			background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-mobile-grab-go.jpg) no-repeat left/100%;
+			height: 15rem;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.specline,
+		.colorpoint,
+		.grab-and-go {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		.teaser {
+			background: #000;
+			color: #fff;
+			padding: 1rem;
+			opacity: 0.8;
+			flex-basis: 50%;
+			text-align: left;
+			font-size: .7em;
+			margin-right: 1.5rem;
+
+			.button {
+				background: transparent;
+				border: 2px solid #3A8886;
+				font-size: .8em;
+
+				&:hover {
+					border-color: #62BB21;
+				}
+			}
+			p {margin-bottom: unset}
+		}
+	}
+
 
 	@media screen and (max-width: 1280px) {
 		.hero {
@@ -352,6 +455,7 @@ Template Post Type: post, page
 		.tiles {
 			.tile {
 				flex-basis: 33%;
+
 				p {
 					min-height: 6rem;
 					font-size: .9em;
@@ -381,6 +485,18 @@ Template Post Type: post, page
 			}
 		}
 
+		.specline,
+		.colorpoint,
+		.grab-and-go {
+			flex-direction: column;
+			background-size: 115%;
+			gap:0;
+			margin: 0;
+			.teaser {
+				flex-basis: 90%;
+			}
+		}
+
 	}
 
 	@media screen and (max-width: 768px) {
@@ -401,6 +517,17 @@ Template Post Type: post, page
 		.tiles {
 			.tile {
 				flex-basis: 80%;
+			}
+		}
+
+		.serving-counters {
+			.specline, .colorpoint,	.grab-and-go {
+				display: block;
+				padding-top: 9rem;
+				height: fit-content;
+				background-size: 100%;
+				background-position-x: left;
+				background-position-y: top;
 			}
 		}
 
@@ -490,7 +617,7 @@ Template Post Type: post, page
 
 			<div class="benefits-container">
 				<div class="benefit participation">
-					<p class="numberroll" data-percentage="47">47%</p>
+					<p class="numberroll" data-percentage="46">46%</p>
 
 				</div>
 				<div class="benefit scores">
@@ -556,6 +683,61 @@ Template Post Type: post, page
 
 		</section>
 
+		<section class="carousel">
+			<h3>Schools Are Transforming the Way They Serve Their Students</h3>
+			<div class="carousel-container">
+				<div class="carousel-item">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-food-bay-empty.jpg" alt="" />
+				</div>
+				<div class="carousel-item">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-tables-empty.jpg" alt="" />
+				</div>
+				<div class="carousel-item">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-food-bays-array.jpg" alt="" />
+				</div>
+				<div class="carousel-item">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-serving-counter.jpg" alt="" />
+				</div>
+				<div class="carousel-item">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-food-serving-area.jpg" alt="" />
+				</div>
+			</div>
+			<!-- <div class="carousel-controls">
+				<button class="prev">Previous</button>
+				<button class="next">Next</button>
+			</div> -->
+		</section>
+
+		<section class="serving-counters">
+			<h3>Build Your Beautiful K-12 Serving SystemWithin Your Budget</h3>
+			<p>When budgets are limited and every dollar must be justified, selecting the right school cafeteria equipment can be a challenge, and one that demands careful consideration.</p>
+
+			<p>LTI’s serving counters and technologies have both the long-lasting performance and attention-grabbing design to keep everyone in your school in good spirits—all within a budget that works for you. </p>
+
+			<div class="specline">
+				<div class="teaser">
+					<p>Our modular serving counters are built, assembled and tested in our Georgia factory to make installation as simple, fast and trouble-free as possible. SpecLine is a durable cafeteria counter available in laminate or stainless steel bodies to match your school’s aesthetic.</p>
+					<a href="" class="button">LEARN MORE</a>
+				</div>
+			</div>
+			<div class="colorpoint">
+				<div class="teaser">
+					<p>Built from virtually indestructible fiberglass, our extremely durable, modular serving counters tackle the daily demands of K-12 foodservice. Available in hundreds of colors, ColorPoint helps create an engaging and vibrant school cafeteria experience for decades. </p>
+					<a href="" class="button">LEARN MORE</a>
+				</div>
+			</div>
+			<div class="grab-and-go">
+				<div class="teaser">
+					<p>Our customizable mobile grab-and-go kiosks and carts give you the flexibility to serve snacks, breakfast and lunch—all with limited space and staff. Without the cost of infrastructure changes, you can add an extra point of service, reduce wait times and help increase meal participation.</p>
+					<a href="" class="button">LEARN MORE</a>
+				</div>
+			</div>
+
+
+		</section>
+
+
+
 		<section id="form-container"></section>
 	</div>
 	'
@@ -614,17 +796,63 @@ Template Post Type: post, page
 	});
 
 	document.querySelectorAll('.smooth-scroll').forEach(el => {
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            const url = el.getAttribute('href');
-            const scrollPx = document.querySelector(url).offsetTop;
-            scrollTo({
-                top: scrollPx,
-                left: 0,
-                behavior: "smooth"
-            });
-        });
-    });
+		el.addEventListener('click', (e) => {
+			e.preventDefault();
+			const url = el.getAttribute('href');
+			const scrollPx = document.querySelector(url).offsetTop;
+			scrollTo({
+				top: scrollPx,
+				left: 0,
+				behavior: "smooth"
+			});
+		});
+	});
+
+	// Infinite loop animation for carousel
+	const carouselContainer = document.querySelector('.carousel-container');
+	let scrollAmount = 0;
+
+	function animateCarousel() {
+		if (carouselContainer.classList.contains('paused')) {
+			return;
+		}
+		scrollAmount -= 1; // Adjust the scroll speed here
+		carouselContainer.style.transform = `translateX(${scrollAmount}px)`;
+
+		// Reset scroll position when it reaches the end
+		if (Math.abs(scrollAmount) >= carouselContainer.scrollWidth / 2) {
+			scrollAmount = 0;
+		}
+		//carouselContainer.style.transition = 'transform 0.1s linear'; // Adjust the transition speed here
+
+		requestAnimationFrame(animateCarousel);
+	}
+	carouselContainer.addEventListener('mouseover', () => {
+		carouselContainer.classList.add('paused');
+	});
+	carouselContainer.addEventListener('mouseout', () => {
+		carouselContainer.classList.remove('paused');
+		animateCarousel();
+	});
+
+	// Start the animation
+	animateCarousel();
+
+	// document.querySelector('.prev').addEventListener('click', () => {
+	// 	carouselContainer.classList.add('paused');
+	// 		const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+	// 		const currentTransform = getComputedStyle(carouselContainer).transform;
+	// 		const currentTranslateX = currentTransform !== 'none' ? parseFloat(currentTransform.split(',')[4]) : 0;
+	// 		carouselContainer.style.transform = `translateX(${currentTranslateX + itemWidth}px)`;
+	// 	});
+
+	// 	document.querySelector('.next').addEventListener('click', () => {
+	// 		carouselContainer.classList.add('paused');
+	// 		const itemWidth = document.querySelector('.carousel-item').offsetWidth;
+	// 		const currentTransform = getComputedStyle(carouselContainer).transform;
+	// 		const currentTranslateX = currentTransform !== 'none' ? parseFloat(currentTransform.split(',')[4]) : 0;
+	// 		carouselContainer.style.transform = `translateX(${currentTranslateX - itemWidth}px)`;
+	// 	});
 </script>
 
 <?php get_template_part('parts/footer'); ?>
