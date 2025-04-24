@@ -1,0 +1,1012 @@
+	.wrapper.k12 {
+		margin: 0 auto;
+		padding: 0;
+		max-width: unset;
+
+		h3 {
+			font-size: 1.5rem;
+			color: #00457C;
+			line-height: 150%;
+
+		}
+
+		p {
+			line-height: 150%;
+		}
+
+		.button {
+			max-width: fit-content;
+			margin: auto;
+			padding: .8rem 1rem;
+			font-size: 1.1rem;
+		}
+	}
+
+	.hero {
+		background: url(/wp-content/uploads/2025/04/main-banner.jpg) center/cover;
+		height: 45vh;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		.hero-content {
+			background-color: #00457C;
+			background-image: url(/wp-content/uploads/2025/04/icon-star-white.png);
+			background-repeat: no-repeat;
+			background-position: 1rem;
+			background-size: 5.8rem;
+			margin: 0 auto;
+			width: 80%;
+			padding: 1rem 1rem 1rem 10rem;
+
+			h1,
+			h2 {
+				color: #fff !important;
+				margin-bottom: .5rem !important;
+				padding: 0 20px;
+			}
+
+			h1 {
+				font-size: 1.5rem;
+			}
+
+			h2 {
+				font-family: "Montserrat", sans-serif;
+				font-weight: 100 !important;
+				font-size: 2rem !important;
+
+				span {
+					background-color: #62BB21;
+					padding: .5rem 1rem;
+					margin-right: .3rem;
+
+					&.decorative {
+						background-color: #62BB21;
+						width: .5rem;
+						max-width: .5rem;
+						padding: 4px 3px 5px 4px
+					}
+				}
+			}
+
+			.rotating-header {
+				display: none;
+				min-width: 21rem;
+				text-align: center;
+
+				&.active {
+					display: inline-block;
+					animation: fade 1s linear;
+				}
+			}
+
+		}
+	}
+
+	.sub-banner,
+	.benefits {
+		width: 80%;
+		margin: auto;
+	}
+
+	.sub-banner {
+		display: flex;
+		background-color: #F2F2F2;
+
+
+		.graphic {
+			flex-basis: 40%;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.copy {
+			flex-basis: 60%;
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+
+
+
+		}
+	}
+
+	.benefits {
+		text-align: center;
+		margin: 2rem auto;
+		padding: 1rem;
+
+		.benefits-container {
+			display: flex;
+			justify-content: space-between;
+			gap: 2rem;
+			margin-top: 2rem;
+
+			.benefit {
+				flex-basis: 50%;
+				text-align: center;
+				min-height: 23rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				max-width: 40rem;
+
+				h3 {
+					position: absolute;
+					bottom: -1.6rem;
+					max-width: 16rem;
+					line-height: 120%;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 100;
+				}
+
+				&.participation {
+					color: #fff;
+					background: url(/wp-content/uploads/2025/04/icon-apples.png) no-repeat center/60%;
+					position: relative;
+
+					&:after {
+						content: '';
+						width: 4px;
+						height: 50%;
+						position: absolute;
+						top: 25%;
+						right: 0;
+						background-color: #F2F2F2;
+
+					}
+				}
+
+				&.scores {
+					color: #fff;
+					background: url(/wp-content/uploads/2025/04/icon-books.png) no-repeat center/60%;
+				}
+
+				.numberroll {
+					color: #fff;
+					font-size: 3rem;
+					font-weight: 700;
+					margin-left: 20%;
+					margin-top: 6%;
+
+				}
+			}
+		}
+
+	}
+
+	.mid-banner {
+		width: 100%;
+		margin: 2rem auto;
+		/* background: url(/wp-content/uploads/2025/04/students-at-cafeteria-table.jpg) no-repeat center/100%; */
+		height: 45vh;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		position: relative;
+		overflow: visible;
+
+		.mid-banner-video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 0;
+		}
+
+		.mid-headers {
+			background-color: rgba(0, 69, 124, 0.8);
+			width: 60%;
+			padding: 2rem;
+			text-align: center;
+			max-height: 11rem;
+			position: absolute;
+			bottom: 0;
+			z-index: 3;
+
+			h3 {
+				color: #fff;
+				font-size: 1.5em;
+				margin-bottom: .5rem;
+			}
+
+			h4 {
+				color: #fff;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 100 !important;
+				font-size: 1.3em;
+				margin-bottom: .5rem;
+			}
+		}
+	}
+
+	.testimonials {
+		width: 100%;
+		margin: 2rem auto;
+		text-align: center;
+		padding: 2rem;
+		position: relative;
+		min-height: 36rem;
+
+		h3,
+		p {
+			text-align: center;
+		}
+
+		.testimonial {
+			position: absolute;
+			padding: 1rem;
+			margin-bottom: 1rem;
+			box-shadow: 0.5rem 0.5rem 1.5rem #eee;
+			width: 35%;
+			height: fit-content;
+			min-height: 13rem;
+
+			&:nth-of-type(1) {
+				top: 6rem;
+				left: 10rem;
+				z-index: 0;
+
+				strong {
+					color: #62BB21;
+				}
+			}
+
+			&:nth-of-type(2) {
+				top: 7rem;
+				right: 5rem;
+			}
+
+			&:nth-of-type(3) {
+				top: 17rem;
+				left: 4rem;
+				z-index: 1;
+				background-color: #fff;
+			}
+
+			&:nth-of-type(4) {
+				bottom: 1rem;
+				right: 15rem;
+				background-color: #fff;
+
+				strong {
+					color: #62BB21;
+				}
+			}
+
+			p {
+				line-height: 175%;
+
+				strong {
+					font-size: 1.2em;
+					color: #00457C;
+				}
+			}
+
+		}
+	}
+
+	.why-lti {
+		background: url(/wp-content/uploads/2025/04/background-contact-form.jpg) no-repeat center/cover;
+		width: 100%;
+		text-align: center;
+		padding: 2rem 0;
+
+		h3.white {
+			color: #fff;
+		}
+	}
+
+	.tiles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		align-items: center;
+		padding: 2rem 4rem;
+		color: #fff;
+
+		.tile {
+			flex-basis: 22%;
+			text-align: center;
+
+			img {
+				width: 100%;
+			}
+
+			p {
+				background-color: #000;
+				min-height: 5rem;
+				padding: .5rem;
+				margin-top: -2rem;
+				opacity: 0.8;
+				font-size: .8em;
+			}
+		}
+	}
+
+	.carousel {
+		margin: 2rem auto;
+	}
+
+
+	.carousel-container {
+		display: flex;
+		/* animation: scroll 15s linear infinite; */
+		/* animation-timing-function: ease-in-out; */
+		overflow: hidden;
+		width: 333%;
+		height: 100%;
+		position: relative;
+		overflow: visible;
+
+		&:hover {
+			animation-play-state: paused;
+		}
+
+		gap: 2rem;
+		padding: 0;
+		justify-content: space-evenly;
+
+		.carousel-item {
+			flex-basis: 33%;
+			position: relative;
+
+			&:hover {
+				cursor: pointer;
+
+				img.small {
+					border: 4px solid #62BB21;
+
+				}
+
+			}
+		}
+	}
+
+
+
+	.serving-counters {
+		width: 80%;
+		margin: 2rem auto;
+		text-align: center;
+		padding: 2rem;
+
+		h3 {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		p {
+			margin-bottom: 2rem;
+		}
+
+		.specline {
+			background: url(/wp-content/uploads/2025/04/background-specline.png) no-repeat left/cover;
+			height: fit-content;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.colorpoint {
+			background: url(/wp-content/uploads/2025/04/background-colorpoint.png) no-repeat left/cover;
+			height: fit-content;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.grab-and-go {
+			background: url(/wp-content/uploads/2025/04/background-mobile-grab-go.png) no-repeat left/cover;
+			background-color: #eee;
+			height: fit-content;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+
+		.specline,
+		.colorpoint,
+		.grab-and-go {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 2rem;
+
+			.logo {
+				width: fit-content;
+				max-width: 23rem;
+				padding: 2rem;
+			}
+
+		}
+
+		.teaser {
+			background: #000;
+			color: #fff;
+			padding: 1rem;
+			opacity: 0.8;
+			flex-basis: 50%;
+			text-align: left;
+			font-size: .7em;
+			margin: 1rem;
+
+			.button {
+				background: transparent;
+				border: 2px solid #3A8886;
+				font-size: 1em;
+				margin-top: .5rem;
+
+				&:hover {
+					border-color: #62BB21;
+				}
+			}
+
+			p {
+				margin-bottom: unset
+			}
+		}
+	}
+
+	.wow-factor {
+		display: flex;
+		width: 80%;
+		margin: 1rem auto;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: 22rem;
+			flex-basis: 50%;
+			position: relative;
+			font-size: .9em;
+
+			h3 {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.star {
+		position: absolute;
+		z-index: 1;
+
+		&.small {
+			top: 2rem;
+			left: 40%;
+			animation: pulsate 2s infinite;
+			width: 3rem;
+
+			&.second {
+				animation: pulsate 1.5s infinite;
+				bottom: 1rem;
+				right: 2rem;
+				top: unset;
+				left: unset;
+			}
+		}
+
+		&.large {
+			bottom: 0;
+			right: 4rem;
+			animation: pulsate 3s infinite;
+			width: 5rem;
+
+			&.second {
+				animation: pulsate 3.5s infinite;
+				bottom: unset;
+				right: unset;
+				top: 0;
+				left: 2rem;
+			}
+		}
+	}
+
+	.carousel-item img.large {
+		display: none;
+		min-width: 600px;
+		position: absolute;
+		top: -100px;
+		left: -100px;
+		z-index: 5;
+		border: 10px solid #eee;
+
+	}
+
+	.carousel-item.show-large {
+		img.large {
+			display: block;
+			animation: zoomin 1s linear;
+		}
+
+		/* &:after {
+		content: "Click to close";
+		width: fit-content;
+		display: block;
+		color: #fff;
+		background-color: #00457C;
+		box-shadow: 5px 5px 5px #ccc;
+		position: relative;
+		top: -4rem;
+		left: 22rem;
+		font-weight: 700;
+		z-index: 6;
+	} */
+
+		img.small {
+			display: none;
+		}
+	}
+
+	.serving-technologies {
+		display: flex;
+		gap: 1rem;
+		width: 80%;
+		margin: 2rem auto 0;
+
+		p {
+			font-size: .9em;
+		}
+
+		div {
+			background-color: #F2F2F2;
+			padding: 2rem;
+			flex-basis: 50%;
+
+			h3,
+			h3+p {
+				margin-bottom: 1rem;
+			}
+
+			.serving-technology {
+				background: #B1B1B1;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				padding: 1rem;
+				min-height: 6rem;
+				justify-content: center;
+				margin: 1rem auto;
+
+				.brandname {
+					font-size: 1.2rem;
+					font-weight: 700;
+					justify-content: center;
+				}
+
+				.description {
+					font-size: .7em;
+					line-height: 120%;
+					padding: 0 1rem;
+					border-left: 1px solid #000;
+					display: none;
+				}
+
+				&:hover {
+					background: #62BB21;
+
+					.description {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.warranty {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			height: 6rem;
+			margin: 1rem auto;
+
+			&:nth-of-type(1) {
+				background: #053159;
+			}
+
+			&:nth-of-type(2) {
+				background: #374B6E;
+			}
+
+			&:nth-of-type(3) {
+				background: #5E6988;
+			}
+
+			.checkmark {
+				display: block;
+				width: 2rem;
+				height: auto;
+				flex-basis: 10%;
+			}
+
+			.warranty-info {
+				flex-basis: 90%;
+				background-color: transparent;
+				color: #fff;
+				padding-left: 5rem;
+
+				h4 {
+					font-size: 2rem;
+					margin-bottom: .5rem;
+				}
+
+				span {
+					font-size: .8rem;
+				}
+			}
+		}
+
+		&+.footnote {
+			font-size: .8rem;
+			text-align: center;
+		}
+	}
+
+	.footer-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		color: #fff;
+		margin-top: 2rem;
+		padding: 1rem;
+		background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-contact-form-1.jpg) no-repeat center/cover;
+
+		.copy {
+			flex-basis: 50%;
+			padding: 1rem;
+
+			h3 {
+				color: #fff;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.form {
+			flex-basis: 50%;
+			padding: 1rem;
+
+			.button,
+			input[type="submit"] {
+				background-color: #62BB21;
+				color: #fff;
+				padding: 1rem 2rem;
+				font-size: 1.2rem;
+				margin-top: 1rem;
+			}
+
+			p {
+				margin-bottom: .5rem;
+			}
+		}
+	}
+
+	.footer-menu-wrapper {
+		margin-top: -1rem;
+	}
+
+	.wpcf7-not-valid-tip {
+		color: yellow !important;
+	}
+
+	.wpcf7 form.invalid .wpcf7-response-output {
+		background-color: #00457C !important;
+	}
+
+
+	/* Media Queries */
+	@media screen and (max-width: 1280px) {
+		.hero {
+			.hero-content {
+				width: 100%;
+				max-height: 30%;
+				background-image: unset;
+				padding: .5rem;
+
+				h1 {
+					font-size: 1.1rem !important;
+					text-align: center;
+				}
+
+				h2 {
+					font-size: 1.3rem !important;
+					text-align: center;
+
+					span {
+						display: inline-block;
+						max-width: fit-content;
+					}
+
+					span.decorative {
+						display: inline;
+						padding: 0.4rem .1rem;
+					}
+				}
+			}
+
+		}
+
+		.benefits {
+			width: 100%;
+			margin-bottom: 0;
+
+			.benefits-container {
+				.benefit {
+					.numberroll {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+
+		.testimonials {
+			.testimonial {
+				position: unset;
+				width: 60vw;
+				margin: 1rem auto;
+			}
+		}
+
+		.tiles {
+			.tile {
+				flex-basis: 33%;
+
+				p {
+					min-height: 6rem;
+					font-size: .9em;
+				}
+			}
+		}
+
+		.serving-technologies {
+			flex-direction: column;
+		}
+
+	}
+
+	@media screen and (max-width:1024px) {
+		.sub-banner {
+			flex-direction: column;
+		}
+
+		.testimonials {
+			font-size: .9rem;
+		}
+
+		.benefits {
+			margin-bottom: 6rem;
+		}
+
+		.mid-banner {
+			font-size: .8rem;
+			margin-top: -5rem;
+
+			.mid-headers {
+				width: 100%;
+				max-height: fit-content;
+			}
+		}
+
+		.serving-counters {
+
+			.specline,
+			.colorpoint,
+			.grab-and-go {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0;
+				margin-bottom: 1rem;
+
+				.teaser {
+					flex-basis: 90%;
+				}
+			}
+		}
+
+		.wow-factor {
+			display: block;
+		}
+
+	}
+
+	@media screen and (max-width: 768px) {
+		.benefits-container {
+			flex-direction: column;
+
+			.benefit {
+				max-width: 30rem;
+
+				&.participation::after {
+					display: none
+				}
+			}
+		}
+
+		.sub-banner {
+			width: 100%;
+		}
+
+		.testimonials {
+			.testimonial {
+				width: 80vw;
+			}
+		}
+
+		.tiles {
+			.tile {
+				flex-basis: 80%;
+			}
+		}
+
+		.serving-counters {
+
+			.specline,
+			.colorpoint,
+			.grab-and-go {
+				display: block;
+				height: fit-content;
+				padding-top: 2rem;
+
+				.teaser {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		.wrapper.k12 {
+			h3 {
+				font-size: 1rem;
+			}
+		}
+
+		.benefits .benefit h3 {
+			font-size: 1.5rem;
+		}
+
+		.hero {
+			.hero-content {
+
+				h2 {
+					span {
+						margin-top: .5rem;
+
+						&.decorative {
+							padding: .35rem .1rem;
+						}
+					}
+				}
+			}
+		}
+
+		.sub-banner .copy {
+			font-size: .8rem;
+			padding: 1rem;
+
+			h3,
+			.button {
+				font-size: 1rem;
+			}
+
+		}
+
+		.benefits {
+			.benefits-container {
+				.benefit {
+					min-height: 16rem;
+				}
+			}
+		}
+
+		.testimonials {
+			.testimonial {
+				width: 85vw;
+			}
+		}
+
+		.mid-banner {
+			height: 35vh;
+
+			.mid-headers {
+				padding: .6rem;
+
+				h3,
+				h4 {
+					font-size: 1.1em;
+				}
+
+				.button {
+					font-size: .9em;
+					padding: .6rem 3rem;
+				}
+			}
+		}
+
+		.tiles {
+			.tile {
+				flex-basis: 100%;
+			}
+		}
+
+		.serving-counters {
+			width: 100%;
+		}
+
+		.wow-factor {
+			width: 95%;
+			margin: auto;
+
+			.copy {
+				.star {
+					display: none;
+				}
+
+				h3 {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	/*  Animations */
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes fade {
+
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes pulsate {
+
+		0%,
+		100% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.2;
+		}
+	}
+
+	@keyframes zoomin {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
