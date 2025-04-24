@@ -2,7 +2,7 @@
 	<?php get_template_part( 'parts/footer-cta' ); ?>
 	<?php endif; ?>
 	
-	<?php if(is_page_template('industry-parent.php') || is_page_template('industry-child.php')): ?>
+	<?php if(is_page_template('industry-parent.php') || is_page_template('industry-child.php') || is_page_template('industry-child-k12.php')): ?>
 	<?php get_template_part( 'parts/footer-industry' ); ?>
 	<?php get_template_part( 'parts/footer-cta' ); ?>
 	<?php endif; ?>

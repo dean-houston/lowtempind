@@ -15,6 +15,7 @@ Template Post Type: post, page
 	.wrapper.k12 {
 		margin: 0 auto;
 		padding: 0;
+		max-width: unset;
 
 		h3 {
 			font-size: 1.5rem;
@@ -36,7 +37,7 @@ Template Post Type: post, page
 	}
 
 	.hero {
-		background: url(https://lowtempind.com/wp-content/uploads/2025/04/main-banner.jpg) center/cover;
+		background: url(/wp-content/uploads/2025/04/main-banner.jpg) center/cover;
 		height: 45vh;
 		position: relative;
 		z-index: 1;
@@ -46,7 +47,7 @@ Template Post Type: post, page
 
 		.hero-content {
 			background-color: #00457C;
-			background-image: url(https://lowtempind.com/wp-content/uploads/2025/04/icon-star-white.png);
+			background-image: url(/wp-content/uploads/2025/04/icon-star-white.png);
 			background-repeat: no-repeat;
 			background-position: 1rem;
 			background-size: 5.8rem;
@@ -79,9 +80,19 @@ Template Post Type: post, page
 						background-color: #62BB21;
 						width: .5rem;
 						max-width: .5rem;
-						padding-right: 0;
-						padding-left: .5rem;
+						padding: 4px 3px 5px 4px
 					}
+				}
+			}
+
+			.rotating-header {
+				display: none;
+				min-width: 21rem;
+				text-align: center;
+
+				&.active {
+					display: inline-block;
+					animation: fade 1s linear;
 				}
 			}
 
@@ -123,6 +134,7 @@ Template Post Type: post, page
 	.benefits {
 		text-align: center;
 		margin: 2rem auto;
+		padding: 1rem;
 
 		.benefits-container {
 			display: flex;
@@ -133,19 +145,42 @@ Template Post Type: post, page
 			.benefit {
 				flex-basis: 50%;
 				text-align: center;
-				min-height: 30vh;
+				min-height: 23rem;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				position: relative;
+				max-width: 40rem;
+
+				h3 {
+					position: absolute;
+					bottom: -1.6rem;
+					max-width: 16rem;
+					line-height: 120%;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 100;
+				}
 
 				&.participation {
 					color: #fff;
-					background: url(https://lowtempind.com/wp-content/uploads/2025/04/icon-apples.png) no-repeat center/60%;
+					background: url(/wp-content/uploads/2025/04/icon-apples.png) no-repeat center/60%;
+					position: relative;
+
+					&:after {
+						content: '';
+						width: 4px;
+						height: 50%;
+						position: absolute;
+						top: 25%;
+						right: 0;
+						background-color: #F2F2F2;
+
+					}
 				}
 
 				&.scores {
 					color: #fff;
-					background: url(https://lowtempind.com/wp-content/uploads/2025/04/icon-books.png) no-repeat center/60%;
+					background: url(/wp-content/uploads/2025/04/icon-books.png) no-repeat center/60%;
 				}
 
 				.numberroll {
@@ -164,11 +199,23 @@ Template Post Type: post, page
 	.mid-banner {
 		width: 100%;
 		margin: 2rem auto;
-		background: url(https://lowtempind.com/wp-content/uploads/2025/04/students-at-cafeteria-table.jpg) no-repeat center/100%;
+		/* background: url(/wp-content/uploads/2025/04/students-at-cafeteria-table.jpg) no-repeat center/100%; */
 		height: 45vh;
 		display: flex;
 		align-items: flex-end;
 		justify-content: center;
+		position: relative;
+		overflow: visible;
+
+		.mid-banner-video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 0;
+		}
 
 		.mid-headers {
 			background-color: rgba(0, 69, 124, 0.8);
@@ -176,6 +223,9 @@ Template Post Type: post, page
 			padding: 2rem;
 			text-align: center;
 			max-height: 11rem;
+			position: absolute;
+			bottom: 0;
+			z-index: 3;
 
 			h3 {
 				color: #fff;
@@ -199,7 +249,7 @@ Template Post Type: post, page
 		text-align: center;
 		padding: 2rem;
 		position: relative;
-		min-height: 54vh;
+		min-height: 36rem;
 
 		h3,
 		p {
@@ -216,7 +266,7 @@ Template Post Type: post, page
 			min-height: 13rem;
 
 			&:nth-of-type(1) {
-				top: 8rem;
+				top: 6rem;
 				left: 10rem;
 				z-index: 0;
 
@@ -226,12 +276,12 @@ Template Post Type: post, page
 			}
 
 			&:nth-of-type(2) {
-				top: 10rem;
+				top: 7rem;
 				right: 5rem;
 			}
 
 			&:nth-of-type(3) {
-				top: 20rem;
+				top: 17rem;
 				left: 4rem;
 				z-index: 1;
 				background-color: #fff;
@@ -260,7 +310,7 @@ Template Post Type: post, page
 	}
 
 	.why-lti {
-		background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-contact-form.jpg) no-repeat center/cover;
+		background: url(/wp-content/uploads/2025/04/background-contact-form.jpg) no-repeat center/cover;
 		width: 100%;
 		text-align: center;
 		padding: 2rem 0;
@@ -298,15 +348,20 @@ Template Post Type: post, page
 		}
 	}
 
+	.carousel {
+		margin: 2rem auto;
+	}
+
 
 	.carousel-container {
 		display: flex;
 		/* animation: scroll 15s linear infinite; */
 		/* animation-timing-function: ease-in-out; */
 		overflow: hidden;
-		width: 180%;
+		width: 333%;
 		height: 100%;
 		position: relative;
+		overflow: visible;
 
 		&:hover {
 			animation-play-state: paused;
@@ -317,19 +372,22 @@ Template Post Type: post, page
 		justify-content: space-evenly;
 
 		.carousel-item {
-			flex-basis: 20%;
+			flex-basis: 33%;
+			position: relative;
+
+			&:hover {
+				cursor: pointer;
+
+				img.small {
+					border: 4px solid #62BB21;
+
+				}
+
+			}
 		}
 	}
 
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-		}
 
-		100% {
-			transform: translateX(-100%);
-		}
-	}
 
 	.serving-counters {
 		width: 80%;
@@ -347,22 +405,23 @@ Template Post Type: post, page
 		}
 
 		.specline {
-			background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-specline.jpg) no-repeat left/100%;
-			height: 15rem;
+			background: url(/wp-content/uploads/2025/04/background-specline.png) no-repeat left/cover;
+			height: fit-content;
 			width: 100%;
 			margin-bottom: 2rem;
 		}
 
 		.colorpoint {
-			background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-colorpoint.jpg) no-repeat left/100%;
-			height: 15rem;
+			background: url(/wp-content/uploads/2025/04/background-colorpoint.png) no-repeat left/cover;
+			height: fit-content;
 			width: 100%;
 			margin-bottom: 2rem;
 		}
 
 		.grab-and-go {
-			background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-mobile-grab-go.jpg) no-repeat left/100%;
-			height: 15rem;
+			background: url(/wp-content/uploads/2025/04/background-mobile-grab-go.png) no-repeat left/cover;
+			background-color: #eee;
+			height: fit-content;
 			width: 100%;
 			margin-bottom: 2rem;
 		}
@@ -374,6 +433,13 @@ Template Post Type: post, page
 			justify-content: flex-end;
 			align-items: center;
 			gap: 2rem;
+
+			.logo {
+				width: fit-content;
+				max-width: 23rem;
+				padding: 2rem;
+			}
+
 		}
 
 		.teaser {
@@ -384,22 +450,283 @@ Template Post Type: post, page
 			flex-basis: 50%;
 			text-align: left;
 			font-size: .7em;
-			margin-right: 1.5rem;
+			margin: 1rem;
 
 			.button {
 				background: transparent;
 				border: 2px solid #3A8886;
-				font-size: .8em;
+				font-size: 1em;
+				margin-top: .5rem;
 
 				&:hover {
 					border-color: #62BB21;
 				}
 			}
-			p {margin-bottom: unset}
+
+			p {
+				margin-bottom: unset
+			}
 		}
 	}
 
+	.wow-factor {
+		display: flex;
+		width: 80%;
+		margin: 1rem auto;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
 
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			min-height: 22rem;
+			flex-basis: 50%;
+			position: relative;
+			font-size: .9em;
+
+			h3 {
+				margin-bottom: 1rem;
+			}
+		}
+	}
+
+	.star {
+		position: absolute;
+		z-index: 1;
+
+		&.small {
+			top: 2rem;
+			left: 40%;
+			animation: pulsate 2s infinite;
+			width: 3rem;
+
+			&.second {
+				animation: pulsate 1.5s infinite;
+				bottom: 1rem;
+				right: 2rem;
+				top: unset;
+				left: unset;
+			}
+		}
+
+		&.large {
+			bottom: 0;
+			right: 4rem;
+			animation: pulsate 3s infinite;
+			width: 5rem;
+
+			&.second {
+				animation: pulsate 3.5s infinite;
+				bottom: unset;
+				right: unset;
+				top: 0;
+				left: 2rem;
+			}
+		}
+	}
+
+	.carousel-item img.large {
+		display: none;
+		min-width: 600px;
+		position: absolute;
+		top: -100px;
+		left: -100px;
+		z-index: 5;
+		border: 10px solid #eee;
+
+	}
+
+	.carousel-item.show-large {
+		img.large {
+			display: block;
+			animation: zoomin 1s linear;
+		}
+
+		/* &:after {
+		content: "Click to close";
+		width: fit-content;
+		display: block;
+		color: #fff;
+		background-color: #00457C;
+		box-shadow: 5px 5px 5px #ccc;
+		position: relative;
+		top: -4rem;
+		left: 22rem;
+		font-weight: 700;
+		z-index: 6;
+	} */
+
+		img.small {
+			display: none;
+		}
+	}
+
+	.serving-technologies {
+		display: flex;
+		gap: 1rem;
+		width: 80%;
+		margin: 2rem auto 0;
+
+		p {
+			font-size: .9em;
+		}
+
+		div {
+			background-color: #F2F2F2;
+			padding: 2rem;
+			flex-basis: 50%;
+
+			h3,
+			h3+p {
+				margin-bottom: 1rem;
+			}
+
+			.serving-technology {
+				background: #B1B1B1;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				padding: 1rem;
+				min-height: 6rem;
+				justify-content: center;
+				margin: 1rem auto;
+
+				.brandname {
+					font-size: 1.2rem;
+					font-weight: 700;
+					justify-content: center;
+				}
+
+				.description {
+					font-size: .7em;
+					line-height: 120%;
+					padding: 0 1rem;
+					border-left: 1px solid #000;
+					display: none;
+				}
+
+				&:hover {
+					background: #62BB21;
+
+					.description {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.warranty {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			height: 6rem;
+			margin: 1rem auto;
+
+			&:nth-of-type(1) {
+				background: #053159;
+			}
+
+			&:nth-of-type(2) {
+				background: #374B6E;
+			}
+
+			&:nth-of-type(3) {
+				background: #5E6988;
+			}
+
+			.checkmark {
+				display: block;
+				width: 2rem;
+				height: auto;
+				flex-basis: 10%;
+			}
+
+			.warranty-info {
+				flex-basis: 90%;
+				background-color: transparent;
+				color: #fff;
+				padding-left: 5rem;
+
+				h4 {
+					font-size: 2rem;
+					margin-bottom: .5rem;
+				}
+
+				span {
+					font-size: .8rem;
+				}
+			}
+		}
+
+		&+.footnote {
+			font-size: .8rem;
+			text-align: center;
+		}
+	}
+
+	.footer-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+		color: #fff;
+		margin-top: 2rem;
+		padding: 1rem;
+		background: url(https://lowtempind.com/wp-content/uploads/2025/04/background-contact-form-1.jpg) no-repeat center/cover;
+
+		.copy {
+			flex-basis: 50%;
+			padding: 1rem;
+
+			h3 {
+				color: #fff;
+				margin-bottom: 1rem;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+		}
+
+		.form {
+			flex-basis: 50%;
+			padding: 1rem;
+
+			.button,
+			input[type="submit"] {
+				background-color: #62BB21;
+				color: #fff;
+				padding: 1rem 2rem;
+				font-size: 1.2rem;
+				margin-top: 1rem;
+			}
+
+			p {
+				margin-bottom: .5rem;
+			}
+		}
+	}
+
+	.footer-menu-wrapper {
+		margin-top: -1rem;
+	}
+
+	.wpcf7-not-valid-tip {
+		color: yellow !important;
+	}
+
+	.wpcf7 form.invalid .wpcf7-response-output {
+		background-color: #00457C !important;
+	}
+
+
+	/* Media Queries */
 	@media screen and (max-width: 1280px) {
 		.hero {
 			.hero-content {
@@ -424,7 +751,7 @@ Template Post Type: post, page
 
 					span.decorative {
 						display: inline;
-						padding: 0.55rem .1rem;
+						padding: 0.4rem .1rem;
 					}
 				}
 			}
@@ -463,6 +790,9 @@ Template Post Type: post, page
 			}
 		}
 
+		.serving-technologies {
+			flex-direction: column;
+		}
 
 	}
 
@@ -473,6 +803,9 @@ Template Post Type: post, page
 
 		.testimonials {
 			font-size: .9rem;
+		}
+		.benefits {
+			margin-bottom: 6rem;
 		}
 
 		.mid-banner {
@@ -485,16 +818,24 @@ Template Post Type: post, page
 			}
 		}
 
-		.specline,
-		.colorpoint,
-		.grab-and-go {
-			flex-direction: column;
-			background-size: 115%;
-			gap:0;
-			margin: 0;
-			.teaser {
-				flex-basis: 90%;
+		.serving-counters {
+
+			.specline,
+			.colorpoint,
+			.grab-and-go {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0;
+				margin-bottom: 1rem;
+
+				.teaser {
+					flex-basis: 90%;
+				}
 			}
+		}
+
+		.wow-factor {
+			display: block;
 		}
 
 	}
@@ -502,6 +843,11 @@ Template Post Type: post, page
 	@media screen and (max-width: 768px) {
 		.benefits-container {
 			flex-direction: column;
+
+			.benefit {
+				max-width: 30rem;
+				&.participation::after {display: none}
+			}
 		}
 
 		.sub-banner {
@@ -521,19 +867,32 @@ Template Post Type: post, page
 		}
 
 		.serving-counters {
-			.specline, .colorpoint,	.grab-and-go {
+
+			.specline,
+			.colorpoint,
+			.grab-and-go {
 				display: block;
-				padding-top: 9rem;
 				height: fit-content;
-				background-size: 100%;
-				background-position-x: left;
-				background-position-y: top;
+				padding-top: 2rem;
+
+				.teaser {
+					margin: 0;
+				}
 			}
 		}
-
 	}
 
 	@media screen and (max-width: 480px) {
+		.wrapper.k12 {
+			h3 {
+				font-size: 1rem;
+			}
+		}
+
+		.benefits .benefit h3 {
+			font-size: 1.5rem;
+		}
+
 		.hero {
 			.hero-content {
 
@@ -545,6 +904,25 @@ Template Post Type: post, page
 							padding: .35rem .1rem;
 						}
 					}
+				}
+			}
+		}
+
+		.sub-banner .copy {
+			font-size: .8rem;
+			padding: 1rem;
+
+			h3,
+			.button {
+				font-size: 1rem;
+			}
+
+		}
+
+		.benefits {
+			.benefits-container {
+				.benefit {
+					min-height: 16rem;
 				}
 			}
 		}
@@ -578,6 +956,69 @@ Template Post Type: post, page
 				flex-basis: 100%;
 			}
 		}
+
+		.serving-counters {
+			width: 100%;
+		}
+
+		.wow-factor {
+			width: 95%;
+			margin: auto;
+
+			.copy {
+				.star {
+					display: none;
+				}
+
+				h3 {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	/*  Animations */
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes fade {
+
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes pulsate {
+
+		0%,
+		100% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: 0.2;
+		}
+	}
+
+	@keyframes zoomin {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
 	}
 </style>
 
@@ -589,7 +1030,12 @@ Template Post Type: post, page
 		<section class="hero">
 			<div class="hero-content">
 				<h1><?php the_title(); ?></h1>
-				<h2>With Beautiful Serving Systems <span>Built to Last</span><span class="decorative"></span></h2>
+				<h2>With Beautiful Serving Systems
+					<span class="rotating-header active">Built to Last</span>
+					<span class="rotating-header">Built in America</span>
+					<span class="rotating-header">Built to Inspire Pride</span>
+					<span class="decorative"></span>
+				</h2>
 			</div>
 		</section>
 
@@ -606,7 +1052,7 @@ Template Post Type: post, page
 
 			</div>
 			<div class="graphic">
-				<img src="https://lowtempind.com/wp-content/uploads/2025/04/students-carrying-food-trays.jpg" alt="Students carrying food trays" />
+				<img src="/wp-content/uploads/2025/04/students-carrying-food-trays.jpg" alt="Students carrying food trays" />
 			</div>
 
 		</section>
@@ -618,16 +1064,19 @@ Template Post Type: post, page
 			<div class="benefits-container">
 				<div class="benefit participation">
 					<p class="numberroll" data-percentage="46">46%</p>
-
+					<h3>More Meal Participation</h3>
 				</div>
 				<div class="benefit scores">
 					<p class="numberroll" data-percentage="17">17%</p>
-
+					<h3>Higher Scores on Standardized Tests</h3>
 				</div>
 			</div>
 		</section>
 
+
 		<section class="mid-banner">
+
+
 			<div class="mid-headers">
 				<h3>Want more in-depth insights on how to <br>create a memorable cafeteria experience? </h3>
 				<h4>[Title of the Long Form Document]</h4>
@@ -635,6 +1084,9 @@ Template Post Type: post, page
 					CLICK HERE TO READ
 				</a>
 			</div>
+			<video autoplay="" muted="" loop="" class="mid-banner-video">
+				<source src="/wp-content/themes/lti-inc/images/students-at-table.mp4" type="video/mp4">
+			</video>
 		</section>
 
 		<section class="testimonials">
@@ -667,15 +1119,15 @@ Template Post Type: post, page
 					<p>Made with Pride by a Woman-Owned Family Business In Operation for 75+ Years</p>
 				</div>
 				<div class="tile">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/students-at-table-closeup.jpg" />
+					<img src="/wp-content/uploads/2025/04/students-at-table-closeup.jpg" />
 					<p>Made to Increase Meal Participation by Inspiring School Pride in Students and Staff</p>
 				</div>
 				<div class="tile">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/warehouse.jpg" />
+					<img src="/wp-content/uploads/2025/04/warehouse.jpg" />
 					<p>Made in America with High-Quality Standards for Simple Maintenance</p>
 				</div>
 				<div class="tile">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-worker.jpg" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-worker.jpg" />
 					<p>Made with Warranty-Backed Durability Needed for K-12 Foodservice</p>
 				</div>
 			</div>
@@ -687,25 +1139,27 @@ Template Post Type: post, page
 			<h3>Schools Are Transforming the Way They Serve Their Students</h3>
 			<div class="carousel-container">
 				<div class="carousel-item">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-food-bay-empty.jpg" alt="" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-food-bay-empty.jpg" class="small" alt="" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-food-bay-empty.jpg" class="large alt="" />
 				</div>
-				<div class="carousel-item">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-tables-empty.jpg" alt="" />
+				<div class=" carousel-item">
+					<img src="/wp-content/uploads/2025/04/cafeteria-tables-empty.jpg" class="small" alt="" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-tables-empty.jpg" class="large alt="" />
 				</div>
-				<div class="carousel-item">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-food-bays-array.jpg" alt="" />
+				<div class=" carousel-item">
+					<img src="/wp-content/uploads/2025/04/cafeteria-food-bays-array.jpg" class="small" alt="" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-food-bays-array.jpg" class="large alt="" />
 				</div>
-				<div class="carousel-item">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-serving-counter.jpg" alt="" />
+				<div class=" carousel-item">
+					<img src="/wp-content/uploads/2025/04/cafeteria-serving-counter.jpg" class="small" alt="" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-serving-counter.jpg" class="large alt="" />
 				</div>
-				<div class="carousel-item">
-					<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-food-serving-area.jpg" alt="" />
+				<div class=" carousel-item">
+					<img src="/wp-content/uploads/2025/04/cafeteria-food-serving-area.jpg" class="small" alt="" />
+					<img src="/wp-content/uploads/2025/04/cafeteria-food-serving-area.jpg" class="large" alt="" />
 				</div>
 			</div>
-			<!-- <div class="carousel-controls">
-				<button class="prev">Previous</button>
-				<button class="next">Next</button>
-			</div> -->
+
 		</section>
 
 		<section class="serving-counters">
@@ -715,35 +1169,131 @@ Template Post Type: post, page
 			<p>LTI’s serving counters and technologies have both the long-lasting performance and attention-grabbing design to keep everyone in your school in good spirits—all within a budget that works for you. </p>
 
 			<div class="specline">
+				<div class="logo">
+					<img src="/wp-content/uploads/2025/04/logo-specline.png" alt="SpecLine Logo" />
+				</div>
 				<div class="teaser">
 					<p>Our modular serving counters are built, assembled and tested in our Georgia factory to make installation as simple, fast and trouble-free as possible. SpecLine is a durable cafeteria counter available in laminate or stainless steel bodies to match your school’s aesthetic.</p>
-					<a href="" class="button">LEARN MORE</a>
+					<a href="/product/specline/" target="_blank" class="button">LEARN MORE</a>
 				</div>
 			</div>
 			<div class="colorpoint">
+				<div class="logo">
+					<img src="/wp-content/uploads/2025/04/logo-colorpoint.png" alt="ColorPoint Logo" />
+				</div>
 				<div class="teaser">
 					<p>Built from virtually indestructible fiberglass, our extremely durable, modular serving counters tackle the daily demands of K-12 foodservice. Available in hundreds of colors, ColorPoint helps create an engaging and vibrant school cafeteria experience for decades. </p>
-					<a href="" class="button">LEARN MORE</a>
+					<a href="/product/colorpoint/" target="_blank" class="button">LEARN MORE</a>
 				</div>
 			</div>
 			<div class="grab-and-go">
+				<div class="logo">
+					<img src="/wp-content/uploads/2025/04/logo-grab-n-go.png" alt="Grab and Go Logo" />
+				</div>
 				<div class="teaser">
 					<p>Our customizable mobile grab-and-go kiosks and carts give you the flexibility to serve snacks, breakfast and lunch—all with limited space and staff. Without the cost of infrastructure changes, you can add an extra point of service, reduce wait times and help increase meal participation.</p>
-					<a href="" class="button">LEARN MORE</a>
+					<a href="/product/mobile-carts-and-kiosks/" target="_blank" class="button">LEARN MORE</a>
 				</div>
 			</div>
-
-
 		</section>
 
+		<section class="wow-factor">
+			<div class="copy">
+				<h3>Want your school's foodservice to have the biggest WOW factor? </h3>
+				<p>Our premier SelectLine serving counters are fully customizable to help create the most spectacular foodservice environment for your students, teachers and staff. Create Your Custom Counter.</p>
+				<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-star.png" alt="Star Icon" class="star large" />
+				<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-star.png" alt="Star Icon" class="star small" />
+			</div>
+			<div class="graphic">
+				<img src="https://lowtempind.com/wp-content/uploads/2025/04/cafeteria-big-counter.png" alt="Big counter" />
+				<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-star.png" alt="Star Icon" class="star large second" />
+				<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-star.png" alt="Star Icon" class="star small second" />
+			</div>
+		</section>
+
+		<section class="serving-technologies">
+			<div>
+				<h3>Serve Hot, Cold and Frozen Food with LTI Serving Technologies</h3>
+				<p>All of LTI’s hot and cold serving line counters and carts are available with our efficient serving technologies.</p>
+
+				<div class="serving-technology">
+					<p class="brandname">TempestAir</p>
+					<p class="description">Ensure consistent and even temperatures in every pan with our flexible and refrigerated cold pans, which feature patented forced-air technology.</p>
+				</div>
+
+				<div class="serving-technology">
+					<p class="brandname">ThermalWell</p>
+					<p class="description">Conserve water and energy with our hot food well technology, which creates an ultra-efficient silicone heat blanket that can be used with or without water.</p>
+				</div>
+				<div class="serving-technology">
+					<p class="brandname">QuickSwitch</p>
+					<p class="description">Expand food choices or quickly replace items easily with our independent food wells that go from hot to cold to frozen in less than an hour. </p>
+				</div>
+			</div>
+			<div>
+				<h3>Long-Lasting Beauty. <br>No Warranty Worries.</h3>
+				<p>Lipsum for balance.<br>
+					More lipsum.</p>
+				<div class="warranty">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-checkmark.png" alt="Checkmark" class="checkmark" />
+					<div class="warranty-info">
+						<h4>5-Year</h4><span>Body Warranty</span>
+					</div>
+				</div>
+				<div class="warranty">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-checkmark.png" class="checkmark" alt="Checkmark" />
+					<div class="warranty-info">
+						<h4>5-Year</h4><span>Compressor Warranty</span>
+					</div>
+
+				</div>
+				<div class="warranty">
+					<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-checkmark.png" class="checkmark" alt="Checkmark" />
+					<div class="warranty-info">
+						<h4>2-Year</h4><span>Parts and Labor Warranty*</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<p class="footnote">*Including QuickSwitch, TempestAir and ThermalWell Serving Technologies</p>
 
 
-		<section id="form-container"></section>
+
+		<section id="form-container" class="footer-container">
+			<div class="copy">
+				<h3>How Can We Help YouBegin Your Transformation?</h3>
+				<p>At LTI, we truly care about your school, students and staff. From our
+					reps who quickly answer questions to our designers who draft with
+					precision, we are obsessed with moving quickly to help make your
+					cafeteria the heart of your school.</p>
+				<p><strong>Looking to take the next step?
+					</strong></p>
+				<p>Please fill out our form and one of our responsive team members will
+					make it their priority to get back to you as quickly as possible.
+				</p>
+			</div>
+			<div class="form">
+				<?php the_field('contact-form') ?>
+			</div>
+
+		</section>
 	</div>
 	'
 </main><!-- / #main -->
 
 <script>
+	// JavaScript to handle the rotating header
+	document.addEventListener('DOMContentLoaded', () => {
+		const rotatingHeaders = document.querySelectorAll('.rotating-header');
+		let currentIndex = 0;
+
+		setInterval(() => {
+			rotatingHeaders[currentIndex].classList.remove('active');
+			currentIndex = (currentIndex + 1) % rotatingHeaders.length;
+			rotatingHeaders[currentIndex].classList.add('active');
+		}, 5000);
+	});
+
 	// JavaScript to animate percentage count
 	document.addEventListener('elementInView', function() {
 		const percentageElements = document.querySelectorAll('p.numberroll');
@@ -768,8 +1318,6 @@ Template Post Type: post, page
 			}, 10);
 		});
 	});
-
-
 
 	// Function to check if an element is in the viewport
 	function isInViewport(element) {
@@ -810,49 +1358,65 @@ Template Post Type: post, page
 
 	// Infinite loop animation for carousel
 	const carouselContainer = document.querySelector('.carousel-container');
+	const carouselItems = Array.from(carouselContainer.children);
+
+	// Duplicate carousel items for seamless looping
+	carouselItems.forEach(item => {
+		const clone = item.cloneNode(true);
+		carouselContainer.appendChild(clone);
+	});
+
 	let scrollAmount = 0;
 
 	function animateCarousel() {
 		if (carouselContainer.classList.contains('paused')) {
 			return;
 		}
+
 		scrollAmount -= 1; // Adjust the scroll speed here
 		carouselContainer.style.transform = `translateX(${scrollAmount}px)`;
 
-		// Reset scroll position when it reaches the end
-		if (Math.abs(scrollAmount) >= carouselContainer.scrollWidth / 2) {
+		// Reset scroll position seamlessly when it reaches the end
+		if (Math.abs(scrollAmount) >= carouselItems[0].offsetWidth * carouselItems.length) {
 			scrollAmount = 0;
+			carouselContainer.style.transition = 'none';
+			carouselContainer.style.transform = `translateX(${scrollAmount}px)`;
+			requestAnimationFrame(() => {
+				carouselContainer.style.transition = 'transform 0.1s linear';
+			});
 		}
-		//carouselContainer.style.transition = 'transform 0.1s linear'; // Adjust the transition speed here
 
 		requestAnimationFrame(animateCarousel);
 	}
-	carouselContainer.addEventListener('mouseover', () => {
-		carouselContainer.classList.add('paused');
+
+	carouselContainer.querySelectorAll('.carousel-item').forEach(item => {
+		item.addEventListener('mouseover', (event) => {
+			event.stopPropagation();
+			carouselContainer.classList.add('paused');
+		});
+
+		item.addEventListener('click', (event) => {
+			event.stopPropagation();
+			item.classList.toggle('show-large');
+		});
 	});
-	carouselContainer.addEventListener('mouseout', () => {
-		carouselContainer.classList.remove('paused');
-		animateCarousel();
+
+	carouselContainer.querySelectorAll('.carousel-item').forEach(item => {
+		item.addEventListener('mouseleave', (event) => {
+			event.stopPropagation();
+			carouselContainer.classList.remove('paused');
+			console.log(carouselContainer.querySelector('.show-large'));
+			animateCarousel();
+			setTimeout(() => {
+				item.classList.remove('show-large');
+			}, 1000);
+		});
 	});
+
+
 
 	// Start the animation
 	animateCarousel();
-
-	// document.querySelector('.prev').addEventListener('click', () => {
-	// 	carouselContainer.classList.add('paused');
-	// 		const itemWidth = document.querySelector('.carousel-item').offsetWidth;
-	// 		const currentTransform = getComputedStyle(carouselContainer).transform;
-	// 		const currentTranslateX = currentTransform !== 'none' ? parseFloat(currentTransform.split(',')[4]) : 0;
-	// 		carouselContainer.style.transform = `translateX(${currentTranslateX + itemWidth}px)`;
-	// 	});
-
-	// 	document.querySelector('.next').addEventListener('click', () => {
-	// 		carouselContainer.classList.add('paused');
-	// 		const itemWidth = document.querySelector('.carousel-item').offsetWidth;
-	// 		const currentTransform = getComputedStyle(carouselContainer).transform;
-	// 		const currentTranslateX = currentTransform !== 'none' ? parseFloat(currentTransform.split(',')[4]) : 0;
-	// 		carouselContainer.style.transform = `translateX(${currentTranslateX - itemWidth}px)`;
-	// 	});
 </script>
 
 <?php get_template_part('parts/footer'); ?>
