@@ -31,7 +31,7 @@ Template Post Type: post, page
 			<div class="copy">
 				<h3>What turns food into a meaningful meal?<br>
 					The environment.</h3>
-				<p>Whether you’re renovating or starting a new build, LTIss long-lasting and beautiful serving systems are designed to visually transform your foodservice experience into a welcoming environment that students and staff proudly call their school cafeteria.</p>
+				<p>Whether you're renovating or starting a new build, LTI's long-lasting and beautiful serving systems are designed to visually transform your foodservice experience into a welcoming environment that students and staff proudly call their school cafeteria.</p>
 
 				<a href="#form-container" class="button green smooth-scroll">
 					BEGIN YOUR TRANSFORMATION
@@ -67,7 +67,7 @@ Template Post Type: post, page
 
 			<div class="mid-headers">
 				<h3>Want more in-depth insights on how to <br>create a memorable cafeteria experience? </h3>
-				<h4>[Title of the Long Form Document]</h4>
+				<h4>The Impact of Transforming Your K-12 Cafeteria</h4>
 				<a href="" class="button green">
 					CLICK HERE TO READ
 				</a>
@@ -187,7 +187,7 @@ Template Post Type: post, page
 
 		<section class="wow-factor">
 			<div class="copy">
-				<h3>Want your school's foodservice to have the biggest WOW factor? </h3>
+				<h3>Want your school's foodservice to have the biggest WOW factor? </h3>
 				<p>Our premier SelectLine serving counters are fully customizable to help create the most spectacular foodservice environment for your students, teachers and staff. Create Your Custom Counter.</p>
 				<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-star.png" alt="Star Icon" class="star large" />
 				<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-star.png" alt="Star Icon" class="star small" />
@@ -220,8 +220,7 @@ Template Post Type: post, page
 			</div>
 			<div>
 				<h3>Long-Lasting Beauty. <br>No Warranty Worries.</h3>
-				<p>Lipsum for balance.<br>
-					More lipsum.</p>
+				<p>Enjoy peace of mind with industry-leading warranties from LTI &mdash; a manufacturer committed to delivering the highest standards of durability and beauty. </p>
 				<div class="warranty">
 					<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-checkmark.png" alt="Checkmark" class="checkmark" />
 					<div class="warranty-info">
@@ -249,15 +248,11 @@ Template Post Type: post, page
 
 		<section id="form-container" class="footer-container">
 			<div class="copy">
-				<h3>How Can We Help YouBegin Your Transformation?</h3>
-				<p>At LTI, we truly care about your school, students and staff. From our
-					reps who quickly answer questions to our designers who draft with
-					precision, we are obsessed with moving quickly to help make your
-					cafeteria the heart of your school.</p>
-				<p><strong>Looking to take the next step?
-					</strong></p>
-				<p>Please fill out our form and one of our responsive team members will
-					make it their priority to get back to you as quickly as possible.
+				<h3>How Can We Help You Begin Your Transformation?</h3>
+				<p>At LTI, we truly care about your school, students and staff. From our reps who quickly answer questions to our designers who draft with
+					precision, we are obsessed with moving quickly to help make your cafeteria the heart of your school.</p>
+				<p><strong>Looking to take the next step?</strong></p>
+				<p>Please fill out our form and one of our responsive team members will make it their priority to get back to you as quickly as possible.
 				</p>
 			</div>
 			<div class="form">
