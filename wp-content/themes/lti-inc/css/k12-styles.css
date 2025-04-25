@@ -707,7 +707,7 @@
 		color: yellow !important;
 	}
 
-	.wpcf7 form.invalid .wpcf7-response-output {
+	.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.sent .wpcf7-response-output {
 		background-color: #00457C !important;
 	}
 
