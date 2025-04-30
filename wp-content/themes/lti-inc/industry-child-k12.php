@@ -68,7 +68,7 @@ Template Post Type: post, page
 			<div class="mid-headers">
 				<h3>Want more in-depth insights on how to <br>create a memorable cafeteria experience? </h3>
 				<h4>The Impact of Transforming Your K-12 Cafeteria</h4>
-				<a href="" class="button green">
+				<a href="/wp-content/uploads/2025/04/Impact_of_Transforming_Your_K-12__Cafeteria.pdf" target="_blank" class="button green">
 					CLICK HERE TO READ
 				</a>
 			</div>
@@ -82,7 +82,7 @@ Template Post Type: post, page
 			<p>Everything from higher participation rates to over-the-weekend installations, here’s why K-12 foodservice leaders are raving about LTI.</p>
 
 			<div class="testimonial">
-				<p><strong>"I am extremely excited for my students to be able to dine in such an exquisite environment that your team created. And it was all done over a weekend!"</strong></p>
+				<p><strong>"I am extremely excited for my students to be able to dine in such an exquisite environment that your team created. And it was all done over a weekend!"</strong></p>
 				<p>- Craigmont High School Principal</p>
 			</div>
 			<div class="testimonial">
@@ -151,7 +151,7 @@ Template Post Type: post, page
 		</section>
 
 		<section class="serving-counters">
-			<h3>Build Your Beautiful K-12 Serving SystemWithin Your Budget</h3>
+			<h3>Build Your Beautiful K-12 Serving System Within Your Budget</h3>
 			<p>When budgets are limited and every dollar must be justified, selecting the right school cafeteria equipment can be a challenge, and one that demands careful consideration.</p>
 
 			<p>LTI’s serving counters and technologies have both the long-lasting performance and attention-grabbing design to keep everyone in your school in good spirits—all within a budget that works for you. </p>
@@ -256,7 +256,8 @@ Template Post Type: post, page
 				</p>
 			</div>
 			<div class="form">
-				<?php the_field('contact-form') ?>
+				<?php //the_field('contact-form') ?>
+				<?php echo do_shortcode('[contact-form-7 id="a22f66d" title="Product Contact Form K12"]'); ?>
 			</div>
 
 		</section>
