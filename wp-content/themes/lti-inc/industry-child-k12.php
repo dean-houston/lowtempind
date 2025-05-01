@@ -224,7 +224,7 @@ Template Post Type: post, page
 				<div class="warranty">
 					<img src="https://lowtempind.com/wp-content/uploads/2025/04/icon-checkmark.png" alt="Checkmark" class="checkmark" />
 					<div class="warranty-info">
-						<h4>5-Year</h4><span>Body Warranty</span>
+						<h4>5-Year</h4><span>Fiberglass Body Warranty</span>
 					</div>
 				</div>
 				<div class="warranty">
