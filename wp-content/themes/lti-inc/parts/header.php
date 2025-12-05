@@ -32,10 +32,10 @@
 		<div class="wrapper">
 			<div id="bottom-links-wrapper">
 				<ul id="top-links">
-					<li class="menu-cta" style="width: 25%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/resources/blog/">Blog</a></li>
-					<li class="menu-cta" style="width: 25%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/configurators/">Configurators</a></li>
-					<li class="menu-cta" style="width: 25%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/find-your-rep/">Find a Rep</a></li>
-					<li class="menu-cta" style="width: 25%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/quickturn/">Quick Turn</a></li>			
+					<li class="menu-cta" style="width: 33.333%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/resources/blog/">Blog</a></li>
+					<!-- <li class="menu-cta" style="width: 25%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/configurator/">Configurators</a></li> -->
+					<li class="menu-cta" style="width: 33.333%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/find-your-rep/">Find a Rep</a></li>
+					<li class="menu-cta" style="width: 33.333%; font-size: 12px;"><a href="<?php bloginfo('siteurl'); ?>/quickturn/">Quick Turn</a></li>			
 					<!-- <li class="menu-cta"><a href="<?php bloginfo('siteurl'); ?>/contact-us/">Contact Us</a></li> -->
 					<!-- <li class="menu-cta"><a href="<?php bloginfo('siteurl'); ?>/covid">COVID Update</a></li> -->
 				</ul>

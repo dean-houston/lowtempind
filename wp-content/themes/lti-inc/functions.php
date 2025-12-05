@@ -17,9 +17,6 @@
 		//}
 	//);
 	
-	define( 'WP_ROCKET_EMAIL', 'vantagepointmarketing@gmail.com');
-	define( 'WP_ROCKET_KEY', '50900154');
-	
 	/* CASE STUDY SLIDER -- https://support.advancedcustomfields.com/forums/topic/how-to-use-alt-tags/ */
 	function get_image_with_alt($background, $postID, $imagesize = 'slider'){
 	$imageID = get_sub_field($background, $postID); 

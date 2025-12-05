@@ -1036,13 +1036,13 @@ body {
 	position: relative;}
 
 	#top #logo {
-		background-image: url(../images/lti-logo-reversed.svg); 
+		background-image: url(../images/lti-logo-reversed-no-tag.svg); 
 		/* background-image: url(../images/75thanniversary-reversed.png); */
 		background-repeat: no-repeat;
 		background-size: 100%;
 		display: block;
-		height: 52px;
-		width: 125px;
+		height: 65px;
+		width: 57.6px;
 		float: left;
 		overflow: hidden;
 		text-indent: 101%;
@@ -2093,11 +2093,11 @@ padding-bottom: 25px;}
 	}
 	#branding {
 		background-color: #e2e2e2;
-		background-image: url(../images/lti-logo-two-color.svg);
+		background-image: url(../images/lti-logo-two-color-no-tag.svg);
 		background-repeat: no-repeat;
-		background-size: 155px 65px;
+		background-size: 73px 65px;
 		height: 65px;
-		width: 155px;
+		width: 73px;
 		float: left;
 	}
 	/* via https://www.w3docs.com/tools/code-editor/263 */
@@ -3385,13 +3385,13 @@ HEADER
 */
 
     #top #logo {
-	background-image: url(../images/lti-logo-two-color.svg);
+	background-image: url(../images/lti-logo-two-color-no-tag.svg);
 	/* background-image: url(../images/75thanniversary.png); */
-	height: 105px;
+	height: 113px;
 	background-size: 100%;
 	margin-top: 20px;
 	margin-bottom: 10px;
-	width: 250px;}			
+	width: 100px;}			
     #top #nav-activate {
       display: block;
       color: #444444;

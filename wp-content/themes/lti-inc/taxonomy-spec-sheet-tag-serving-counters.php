@@ -16,7 +16,7 @@
 				</div>
 
 				<div class="post-list-group">
-					<h3>ColorPoint Modular Fiberglass Serviing Counter Spec Sheets</h3>
+					<h3>ColorPoint Modular Fiberglass Serving Counter Spec Sheets</h3>
 					<p>Available with any of LTI’s technology and control systems to create a cost-effective and durable modular serving line.</p>
 					<div id="post-list" class="grid-layout">
 							<?php 
