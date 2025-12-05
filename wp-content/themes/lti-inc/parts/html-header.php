@@ -12,6 +12,8 @@
 		})(window,document,'script','dataLayer','GTM-KV66G3Z');</script>
 		<!-- End Google Tag Manager -->
 
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+		
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

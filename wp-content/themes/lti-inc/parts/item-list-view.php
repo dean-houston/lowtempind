@@ -9,16 +9,22 @@
 				<?php while(the_repeater_field('item_list')): ?>
 				<div id="post-list" class="list-view">
 					<div class="item">
-						<a href="<?php the_sub_field('item_url'); ?>" title="<?php the_sub_field('item_title_tag'); ?>">
+						
 							<div class="featured-image">
 								<img src="<?php the_sub_field('item_image','list-image'); ?>" >
 							</div><!-- / .feature-image -->
 							<div class="item-detail">
 								<h3><?php the_sub_field('item_title'); ?></h3>
 								<p><?php the_sub_field('item_text'); ?></p>
-								<p class="read-more">Read More <i class="fa-solid fa-chevron-right"></i></p>
+								<a href="<?php the_sub_field('item_url'); ?>" title="<?php the_sub_field('item_title_tag'); ?>" class="read-more">Browse Options <i class="fa-solid fa-chevron-right"></i></a>
+								
+								<?php $flyer_url = get_sub_field('flyer_url'); ?>
+								<?php if(!empty($flyer_url)): ?>
+								<a href="<?php the_sub_field('flyer_url'); ?>" title="<?php the_sub_field('flyer_title_tag'); ?>" target="_blank" class="read-more">Download Flyer <i class="fa-solid fa-chevron-right"></i></a>
+								<?php endif; ?>
+								
 							</div><!-- / .item-detail -->
-						</a>
+						
 					</div><!-- / .item -->
 				<?php endwhile; ?>
 				
