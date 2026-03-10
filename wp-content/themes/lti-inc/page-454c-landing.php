@@ -335,38 +335,83 @@ Template Post Type: post, page
             }
         }
 
-        @media screen and (max-width: 600px) {
+        .blog-posts {
+            background-color: #F2F2F2;
+            padding: 2rem;
 
-            .hero,
-            .form-container,
-            .comparison,
-            .school-benefits .container {
-                flex-direction: column;
+            h2,
+            h3 {
+                color: var(--blue-text-color);
+                font-weight: bold;
+                font-style: normal;
+                margin: 1rem 0;
             }
 
-            .hero div,
-            .form-container .copy,
-            .form-container .form,
-            .comparison .copy,
-            .comparison .comparison-table {
-                flex-basis: 100%;
-                max-width: 100%;
+            p {
+                line-height: 165%;
+
+                a {
+                    font-weight: bold;
+                    margin-top: .5rem;
+                    display: inline-block;
+                    color: var(--blue-text-color);
+                }
             }
 
-            .comparison .copy {
-                padding: 1rem;
-            }
+            .blog-posts-container {
+                display: flex;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                }
+                gap: 2rem;
+                justify-content: center;
+                margin: 2rem 0;
 
-            .form-container .form input,
-            .form-container .form select {
-                max-width: 23rem;
+                .blog-post {
+                    img {
+                        aspect-ratio: 40 / 21;
+                        object-fit: cover;
+                        width: 100%;
+                        min-height: 20rem;
+                        max-width: 49rem;
+                    }
+                }
             }
-
-            .benefits .details .detail {
-                max-width: 100%;
-            }
-
         }
+    }
+
+    @media screen and (max-width: 600px) {
+
+        .hero,
+        .form-container,
+        .comparison,
+        .school-benefits .container {
+            flex-direction: column;
+        }
+
+        .hero div,
+        .form-container .copy,
+        .form-container .form,
+        .comparison .copy,
+        .comparison .comparison-table {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        .comparison .copy {
+            padding: 1rem;
+        }
+
+        .form-container .form input,
+        .form-container .form select {
+            max-width: 23rem;
+        }
+
+        .benefits .details .detail {
+            max-width: 100%;
+        }
+
+    }
     }
 </style>
 
@@ -467,33 +512,7 @@ Template Post Type: post, page
         <!-- <div>video</div> -->
 
     </section>
-    <!-- <section class="testimonials">
-        <h2 class="white-text">What’s Everyone Saying About R-454C?</h2>
-        <div class="testimonial">
-            <p class="blue-text">
-                <strong>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</strong>
-            </p>
-            <span>Lorem ipsum dolor</span>
-        </div>
-        <div class="testimonial">
-            <p class="green-text">
-                <strong>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</strong>
-            </p>
-            <span>Lorem ipsum dolor</span>
-        </div>
-        <div class="testimonial">
-            <p class="blue-text">
-                <strong>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</strong>
-            </p>
-            <span>Lorem ipsum dolor</span>
-        </div>
-    </section> -->
+
     <section class="school-benefits">
         <h2>How Does Your K-12 School Benefit?</h2>
         <div class="container">
@@ -561,6 +580,30 @@ Template Post Type: post, page
             </table>
         </div>
 
+    </section>
+
+    <section class="blog-posts">
+        <h2>Food Well Insights</h2>
+        <p>Explore the following educational resources about food well refrigerants and how they impact today’s foodservice.</p>
+        <div class="blog-posts-container">
+
+            <div class="blog-post">
+                <a href="/how-does-r-454c-refrigerant-compare-to-r-404a-and-r-290-propane/">
+                    <img src="/wp-content/uploads/2026/02/blog-r454c-vs-others-featured-image.jpg" alt="R-454C vs Other Refrigerants">
+                </a>
+                <h3>How Does R-454C Refrigerant Compare to R-404A and R-290 (Propane)?</h3>
+                <p>Food well refrigerant may seem like a behind-the-scenes detail, but it directly affects efficiency, compliance, maintenance demands and how smoothly meal service runs in K-12 kitchens.</p>
+                <p><a href="/how-does-r-454c-refrigerant-compare-to-r-404a-and-r-290-propane/">Learn more</a></p>
+            </div>
+            <div class="blog-post">
+                <a href="/5-ways-r-454c-food-well-refrigerant-benefits-your-k-12-foodservice/">
+                    <img src="/wp-content/uploads/2026/02/reduce-downtime-post-featured-image.jpg" alt="Reduce Downtime with R-454C">
+                </a>
+                <h3>5 Ways R-454C Food Well RefrigerantBenefits Your K-12 Foodservice</h3>
+                <p>Reliable foodservice starts behind the scenes, with consistent food well performance supported by the right refrigerant. For many school districts, that refrigerant is R-454C.</p>
+                <p><a href="/5-ways-r-454c-food-well-refrigerant-benefits-your-k-12-foodservice/">Learn more</a></p>
+            </div>
+        </div>
     </section>
 
 
